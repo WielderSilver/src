@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "scmcraft:blocks/ruby_ore" }
+    }
+}

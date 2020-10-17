@@ -1,0 +1,55 @@
+{
+	"item.scmcraft.ruby": "Ruby",
+	"item.scmcraft.topaz": "Topaz",
+	"item.scmcraft.sapphire": "Sapphire",
+	"item.scmcraft.amethyst": "Amethyst",
+	"item.scmcraft.mythril_shard": "Mythril Shard",
+	"item.scmcraft.pole": "Pole",
+	
+	"block.scmcraft.ruby_block": "Ruby Block",
+	"block.scmcraft.topaz_block": "Topaz Block",
+	"block.scmcraft.amethyst_block": "Amethyst Block",
+	"block.scmcraft.sapphire_block": "Sapphire Block",
+	"block.scmcraft.mythril_block": "Mythril Block",
+	"block.scmcraft.ruby_ore": "Ruby Ore",
+	"block.scmcraft.topaz_ore": "Topaz Ore",
+	"block.scmcraft.amethyst_ore": "Amethyst Ore",
+	"block.scmcraft.sapphire_ore": "Sapphire Ore",
+	"block.scmcraft.mythril_ore": "Mythril Ore",
+	
+	"item.scmcraft.ruby_sword": "Ruby Sword",
+	"item.scmcraft.ruby_pickaxe": "Ruby Pickaxe",
+	"item.scmcraft.ruby_shovel": "Ruby Shovel",
+	"item.scmcraft.ruby_hoe": "Ruby Hoe",
+	"item.scmcraft.ruby_axe": "Ruby Axe",
+	
+	"item.scmcraft.sapphire_sword": "Sapphire Sword",
+	"item.scmcraft.sapphire_pickaxe": "Sapphire Pickaxe",
+	"item.scmcraft.sapphire_shovel": "Sapphire Shovel",
+	"item.scmcraft.sapphire_hoe": "Sapphire Hoe",
+	"item.scmcraft.sapphire_axe": "Sapphire Axe",	
+
+	"item.scmcraft.topaz_sword": "Topaz Sword",
+	"item.scmcraft.topaz_pickaxe": "Topaz Pickaxe",
+	"item.scmcraft.topaz_shovel": "Topaz Shovel",
+	"item.scmcraft.topaz_hoe": "Topaz Hoe",
+	"item.scmcraft.topaz_axe": "Topaz Axe",
+	
+	"item.scmcraft.amethyst_sword": "Amethyst Sword",
+	"item.scmcraft.amethyst_pickaxe": "Amethyst Pickaxe",
+	"item.scmcraft.amethyst_shovel": "Amethyst Shovel",
+	"item.scmcraft.amethyst_hoe": "Amethyst Hoe",
+	"item.scmcraft.amethyst_axe": "Amethyst Axe",
+	
+	"item.scmcraft.emerald_sword": "Emerald Sword",
+	"item.scmcraft.emerald_pickaxe": "Emerald Pickaxe",
+	"item.scmcraft.emerald_shovel": "Emerald Shovel",
+	"item.scmcraft.emerald_hoe": "Emerald Hoe",
+	"item.scmcraft.emerald_axe": "Emerald Axe",
+	
+	"item.scmcraft.mythril_sword": "Mythril Sword",
+	"item.scmcraft.mythril_pickaxe": "Mythril Pickaxe",
+	"item.scmcraft.mythril_shovel": "Mythril Shovel",
+	"item.scmcraft.mythril_hoe": "Mythril Hoe",
+	"item.scmcraft.mythril_axe": "Mythril Axe"
+}
