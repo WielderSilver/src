@@ -1,9 +1,6 @@
 package com.wieldersilver.scmcraft.init;
 
 import java.util.function.Supplier;
-import net.minecraft.item.Items;
-
-import javax.naming.directory.ModificationItem;
 
 import com.wieldersilver.scmcraft.scmcraft;
 
@@ -12,6 +9,7 @@ import net.minecraft.item.HoeItem;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Items;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;

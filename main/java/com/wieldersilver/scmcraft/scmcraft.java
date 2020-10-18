@@ -3,6 +3,8 @@ package com.wieldersilver.scmcraft;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.wieldersilver.scmcraft.worldgen.OreGeneration;
+
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -27,23 +29,26 @@ public class scmcraft
     	
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);       
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        //FMLJavaModLoadingContext.get().getModEventBus().addListener(this::loadCompleteEvent);
         
         MinecraftForge.EVENT_BUS.register(this);
+        
+        LOGGER.debug("Woot woot, loading stuff up!");
     }
 
     private void setup(final FMLCommonSetupEvent event)
     {
-    	
+    	OreGeneration.setupOreGeneration();
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) 
     {
 
     }
+    
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) 
     {
-       
+    	
     }
-         
 }
