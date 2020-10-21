@@ -1,20 +1,15 @@
 package com.wieldersilver.scmcraft.init;
 
-import java.util.function.Supplier;
-
 import com.wieldersilver.scmcraft.scmcraft;
+import com.wieldersilver.scmcraft.tools.ModItemTier;
 
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.HoeItem;
-import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.Items;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.LazyValue;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -26,156 +21,98 @@ import net.minecraftforge.registries.ObjectHolder;
 public class ItemInit 
 {
 	
-	public static final Item ruby = null;
-	public static final Item topaz = null;
-	public static final Item amethyst = null;
-	public static final Item sapphire = null;
-	public static final Item mythril_shard = null;
-	public static final Item pole = null;
+	public static final Item ruby = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("ruby");
+	public static final Item topaz = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("topaz");
+	public static final Item amethyst = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("amethyst");
+	public static final Item sapphire = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("sapphire");
+	public static final Item mythril_shard = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("mythril_shard");
+	public static final Item pole = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("pole");
 
 	//Tools
-	public static final Item ruby_sword = null;
-	public static final Item ruby_hoe = null;
-	public static final Item ruby_axe = null;
-	public static final Item ruby_shovel = null;
-	public static final Item ruby_pickaxe = null;
+	public static final Item ruby_sword = new SwordItem(ModItemTier.RUBY, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_sword");
+	public static final Item ruby_hoe = new HoeItem(ModItemTier.RUBY, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_hoe");
+	public static final Item ruby_axe = new AxeItem(ModItemTier.RUBY, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_axe");
+	public static final Item ruby_shovel = new ShovelItem(ModItemTier.RUBY, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_shovel");
+	public static final Item ruby_pickaxe = new PickaxeItem(ModItemTier.RUBY, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_pickaxe");
 	
+	public static final Item emerald_sword = new SwordItem(ModItemTier.EMERALD, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_sword");;
+	public static final Item emerald_hoe = new HoeItem(ModItemTier.EMERALD, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_hoe");
+	public static final Item emerald_axe = new AxeItem(ModItemTier.EMERALD, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_axe");
+	public static final Item emerald_shovel = new ShovelItem(ModItemTier.EMERALD, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_shovel");
+	public static final Item emerald_pickaxe = new PickaxeItem(ModItemTier.EMERALD, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_pickaxe");
 	
+	public static final Item sapphire_sword = new SwordItem(ModItemTier.SAPPHIRE, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_sword");;
+	public static final Item sapphire_hoe = new HoeItem(ModItemTier.SAPPHIRE, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_hoe");
+	public static final Item sapphire_axe = new AxeItem(ModItemTier.SAPPHIRE, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_axe");
+	public static final Item sapphire_shovel = new ShovelItem(ModItemTier.SAPPHIRE, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_shovel");
+	public static final Item sapphire_pickaxe = new PickaxeItem(ModItemTier.SAPPHIRE, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_pickaxe");
+
+	public static final Item topaz_sword = new SwordItem(ModItemTier.TOPAZ, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_sword");;
+	public static final Item topaz_hoe = new HoeItem(ModItemTier.TOPAZ, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_hoe");
+	public static final Item topaz_axe = new AxeItem(ModItemTier.TOPAZ, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_axe");
+	public static final Item topaz_shovel = new ShovelItem(ModItemTier.TOPAZ, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_shovel");
+	public static final Item topaz_pickaxe = new PickaxeItem(ModItemTier.TOPAZ, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_pickaxe");
+	
+	public static final Item amethyst_sword = new SwordItem(ModItemTier.AMETHYST, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_sword");;
+	public static final Item amethyst_hoe = new HoeItem(ModItemTier.AMETHYST, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_hoe");
+	public static final Item amethyst_axe = new AxeItem(ModItemTier.AMETHYST, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_axe");
+	public static final Item amethyst_shovel = new ShovelItem(ModItemTier.AMETHYST, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_shovel");
+	public static final Item amethyst_pickaxe = new PickaxeItem(ModItemTier.AMETHYST, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_pickaxe");
+	
+	public static final Item mythril_sword = new SwordItem(ModItemTier.MYTHRIL, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_sword");;
+	public static final Item mythril_hoe = new HoeItem(ModItemTier.MYTHRIL, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_hoe");
+	public static final Item mythril_axe = new AxeItem(ModItemTier.MYTHRIL, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_axe");
+	public static final Item mythril_shovel = new ShovelItem(ModItemTier.MYTHRIL, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_shovel");
+	public static final Item mythril_pickaxe = new PickaxeItem(ModItemTier.MYTHRIL, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_pickaxe");
 	
 	
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event)
 	{
-		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("ruby"));
-		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("topaz"));
-		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("amethyst"));
-		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("sapphire"));
-		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("mythril_shard"));
-		event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("pole"));
+		//Materials
+		event.getRegistry().register(ruby);
+		event.getRegistry().register(topaz);
+		event.getRegistry().register(amethyst);
+		event.getRegistry().register(sapphire);
+		event.getRegistry().register(mythril_shard);
+		event.getRegistry().register(pole);
 
 		//Tools (attack damage, attack speed)
-		event.getRegistry().register(new SwordItem(ModItemTier.RUBY, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_sword"));
-		event.getRegistry().register(new AxeItem(ModItemTier.RUBY, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_axe"));
-		event.getRegistry().register(new HoeItem(ModItemTier.RUBY, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_hoe"));
-		event.getRegistry().register(new ShovelItem(ModItemTier.RUBY, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_shovel"));
-		event.getRegistry().register(new PickaxeItem(ModItemTier.RUBY, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_pickaxe"));
+		event.getRegistry().register(ruby_axe);
+		event.getRegistry().register(ruby_hoe);
+		event.getRegistry().register(ruby_pickaxe);
+		event.getRegistry().register(ruby_shovel);
+		event.getRegistry().register(ruby_sword);
 		
-		event.getRegistry().register(new SwordItem(ModItemTier.SAPPHIRE, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_sword"));
-		event.getRegistry().register(new AxeItem(ModItemTier.SAPPHIRE, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_axe"));
-		event.getRegistry().register(new HoeItem(ModItemTier.SAPPHIRE, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_hoe"));
-		event.getRegistry().register(new ShovelItem(ModItemTier.SAPPHIRE, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_shovel"));
-		event.getRegistry().register(new PickaxeItem(ModItemTier.SAPPHIRE, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_pickaxe"));
-
-		event.getRegistry().register(new SwordItem(ModItemTier.TOPAZ, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_sword"));
-		event.getRegistry().register(new AxeItem(ModItemTier.TOPAZ, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_axe"));
-		event.getRegistry().register(new HoeItem(ModItemTier.TOPAZ, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_hoe"));
-		event.getRegistry().register(new ShovelItem(ModItemTier.TOPAZ, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_shovel"));
-		event.getRegistry().register(new PickaxeItem(ModItemTier.TOPAZ, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_pickaxe"));
-
-		event.getRegistry().register(new SwordItem(ModItemTier.AMETHYST, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_sword"));
-		event.getRegistry().register(new AxeItem(ModItemTier.AMETHYST, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_axe"));
-		event.getRegistry().register(new HoeItem(ModItemTier.AMETHYST, 2.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_hoe"));
-		event.getRegistry().register(new ShovelItem(ModItemTier.AMETHYST, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_shovel"));
-		event.getRegistry().register(new PickaxeItem(ModItemTier.AMETHYST, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_pickaxe"));
+		event.getRegistry().register(sapphire_axe);
+		event.getRegistry().register(sapphire_hoe);
+		event.getRegistry().register(sapphire_pickaxe);
+		event.getRegistry().register(sapphire_shovel);
+		event.getRegistry().register(sapphire_sword);
 		
-		event.getRegistry().register(new SwordItem(ModItemTier.EMERALD, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_sword"));
-		event.getRegistry().register(new AxeItem(ModItemTier.EMERALD, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_axe"));
-		event.getRegistry().register(new HoeItem(ModItemTier.EMERALD, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_hoe"));
-		event.getRegistry().register(new ShovelItem(ModItemTier.EMERALD, 2.5f, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_shovel"));
-		event.getRegistry().register(new PickaxeItem(ModItemTier.EMERALD, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_pickaxe"));
+		event.getRegistry().register(emerald_axe);
+		event.getRegistry().register(emerald_hoe);
+		event.getRegistry().register(emerald_pickaxe);
+		event.getRegistry().register(emerald_shovel);
+		event.getRegistry().register(emerald_sword);
 		
-		event.getRegistry().register(new SwordItem(ModItemTier.MYTHRIL, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_sword"));
-		event.getRegistry().register(new AxeItem(ModItemTier.MYTHRIL, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_axe"));
-		event.getRegistry().register(new HoeItem(ModItemTier.MYTHRIL, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_hoe"));
-		event.getRegistry().register(new ShovelItem(ModItemTier.MYTHRIL, 2.5f, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_shovel"));
-		event.getRegistry().register(new PickaxeItem(ModItemTier.MYTHRIL, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_pickaxe"));
-
+		event.getRegistry().register(topaz_axe);
+		event.getRegistry().register(topaz_hoe);
+		event.getRegistry().register(topaz_pickaxe);
+		event.getRegistry().register(topaz_shovel);
+		event.getRegistry().register(topaz_sword);
 		
-	}
-	
-	public enum ModItemTier implements IItemTier
-	{
-		//int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial
-		RUBY(2, 175, 6.0F, 1.0F, 14, () -> {
-			return Ingredient.fromItems(ItemInit.ruby);
-		}),
-		SAPPHIRE(2, 175, 6.0F, 1.0F, 14, () -> {
-			return Ingredient.fromItems(ItemInit.sapphire);
-		}),
-		AMETHYST(2, 175, 6.0F, 1.0F, 14, () -> {
-			return Ingredient.fromItems(ItemInit.amethyst);
-		}),
-		TOPAZ(2, 175, 6.0F, 1.0F, 14, () -> {
-			return Ingredient.fromItems(ItemInit.topaz);
-		}),
-		MYTHRIL(0, 32, 10.0F, -1.0F, 22, () -> {
-			return Ingredient.fromItems(ItemInit.mythril_shard);
-		}),
-		EMERALD(2, 175, 6.0F, 1.0F, 14, () -> {
-			return Ingredient.fromItems(Items.EMERALD);
-		}),
-		;
+		event.getRegistry().register(amethyst_axe);
+		event.getRegistry().register(amethyst_hoe);
+		event.getRegistry().register(amethyst_pickaxe);
+		event.getRegistry().register(amethyst_shovel);
+		event.getRegistry().register(amethyst_sword);
 		
-		private final int harvestLevel;
-		private final int maxUses;
-		private final float efficiency;
-		private final float attackDamage;
-		private final int enchantability;
-		private final LazyValue<Ingredient> repairMaterial;
-		
-		
-		private ModItemTier(int harvestLevel, int maxUses, float efficiency, float attackDamage, int  enchantability, Supplier<Ingredient> repairMaterial)
-		{
-			this.harvestLevel = harvestLevel;
-			this.maxUses = maxUses;
-			this.attackDamage = attackDamage;
-			this.efficiency = efficiency;
-			this.enchantability = enchantability;
-			this.repairMaterial = new LazyValue<Ingredient>(repairMaterial);
-			
-		}
-
-
-		@Override
-		public int getMaxUses() 
-		{
-			return this.maxUses;
-		}
-
-
-		@Override
-		public float getEfficiency() 
-		{
-			return this.efficiency;
-		}
-
-
-		@Override
-		public float getAttackDamage() 
-		{
-			return this.attackDamage;
-		}
-
-
-		@Override
-		public int getHarvestLevel() 
-		{
-			return this.harvestLevel;
-		}
-
-
-		@Override
-		public int getEnchantability() 
-		{
-			return this.enchantability;
-		}
-
-
-		@Override
-		public Ingredient getRepairMaterial() 
-		{
-			return this.repairMaterial.getValue();
-		}
+		event.getRegistry().register(mythril_axe);
+		event.getRegistry().register(mythril_hoe);
+		event.getRegistry().register(mythril_pickaxe);
+		event.getRegistry().register(mythril_shovel);
+		event.getRegistry().register(mythril_sword);
 	}
 }

@@ -25,6 +25,7 @@ public class BlockInit
 	public static final Block topaz_block = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5.0f, 6.0f).sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)).setRegistryName("topaz_block");
 	public static final Block sapphire_block = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5.0f, 6.0f).sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)).setRegistryName("sapphire_block");
 	public static final Block mythril_block = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(5.0f, 6.0f).sound(SoundType.METAL).harvestLevel(2).harvestTool(ToolType.PICKAXE)).setRegistryName("mythril_block");
+	
 	public static final Block ruby_ore = new SCMOreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0f, 6.0f).sound(SoundType.STONE).harvestLevel(2).harvestTool(ToolType.PICKAXE)).setRegistryName("ruby_ore");
 	public static final Block amethyst_ore = new SCMOreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0f, 6.0f).sound(SoundType.STONE).harvestLevel(2).harvestTool(ToolType.PICKAXE)).setRegistryName("amethyst_ore");;
 	public static final Block topaz_ore = new SCMOreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0f, 6.0f).sound(SoundType.STONE).harvestLevel(2).harvestTool(ToolType.PICKAXE)).setRegistryName("topaz_ore");
@@ -56,6 +57,7 @@ public class BlockInit
 		event.getRegistry().register(new BlockItem(topaz_block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("topaz_block"));
 		event.getRegistry().register(new BlockItem(sapphire_block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("sapphire_block"));
 		event.getRegistry().register(new BlockItem(mythril_block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("mythril_block"));
+		
 		event.getRegistry().register(new BlockItem(ruby_ore, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("ruby_ore"));
 		event.getRegistry().register(new BlockItem(amethyst_ore, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("amethyst_ore"));
 		event.getRegistry().register(new BlockItem(topaz_ore, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("topaz_ore"));
