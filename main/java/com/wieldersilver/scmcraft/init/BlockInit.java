@@ -53,15 +53,15 @@ public class BlockInit
 	public static void registerBlockItems(final RegistryEvent.Register<Item> event) 
 	{
 		event.getRegistry().register(new BlockItem(ruby_block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("ruby_block"));
-		event.getRegistry().register(new BlockItem(amethyst_block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("amethyst_block"));
-		event.getRegistry().register(new BlockItem(topaz_block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("topaz_block"));
 		event.getRegistry().register(new BlockItem(sapphire_block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("sapphire_block"));
+		event.getRegistry().register(new BlockItem(topaz_block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("topaz_block"));
+		event.getRegistry().register(new BlockItem(amethyst_block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("amethyst_block"));
 		event.getRegistry().register(new BlockItem(mythril_block, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("mythril_block"));
 		
 		event.getRegistry().register(new BlockItem(ruby_ore, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("ruby_ore"));
-		event.getRegistry().register(new BlockItem(amethyst_ore, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("amethyst_ore"));
-		event.getRegistry().register(new BlockItem(topaz_ore, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("topaz_ore"));
 		event.getRegistry().register(new BlockItem(sapphire_ore, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("sapphire_ore"));
+		event.getRegistry().register(new BlockItem(topaz_ore, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("topaz_ore"));
+		event.getRegistry().register(new BlockItem(amethyst_ore, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("amethyst_ore"));
 		event.getRegistry().register(new BlockItem(mythril_ore, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("mythril_ore"));
 
 	}
