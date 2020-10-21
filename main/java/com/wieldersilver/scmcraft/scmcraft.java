@@ -3,6 +3,8 @@ package com.wieldersilver.scmcraft;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.wieldersilver.scmcraft.init.BlockInit;
+import com.wieldersilver.scmcraft.init.ItemInit;
 import com.wieldersilver.scmcraft.worldgen.OreGeneration;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -23,13 +25,15 @@ public class scmcraft
     public static final String MOD_ID = "scmcraft";
     
     public static scmcraft instance;
+    
+    @SuppressWarnings({ "unused", "rawtypes" })
+	private static final Class[] classes = new Class[] { BlockInit.class, ItemInit.class, OreGeneration.class };
 
     public scmcraft() {        
     	instance = this;
     	
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);       
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-        //FMLJavaModLoadingContext.get().getModEventBus().addListener(this::loadCompleteEvent);
         
         MinecraftForge.EVENT_BUS.register(this);
         
@@ -38,7 +42,7 @@ public class scmcraft
 
     private void setup(final FMLCommonSetupEvent event)
     {
-    	OreGeneration.setupOreGeneration();
+    	
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) 
