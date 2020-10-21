@@ -51,5 +51,35 @@
 	"item.scmcraft.mythril_pickaxe": "Mythril Pickaxe",
 	"item.scmcraft.mythril_shovel": "Mythril Shovel",
 	"item.scmcraft.mythril_hoe": "Mythril Hoe",
-	"item.scmcraft.mythril_axe": "Mythril Axe"
+	"item.scmcraft.mythril_axe": "Mythril Axe",
+	
+	"item.scmcraft.ruby_helmet": "Ruby Helmet",
+	"item.scmcraft.ruby_chestplate": "Ruby Chestplate",
+	"item.scmcraft.ruby_leggings": "Ruby Leggings",
+	"item.scmcraft.ruby_boots": "Ruby Boots",
+	
+	"item.scmcraft.sapphire_helmet": "Sapphire Helmet",
+	"item.scmcraft.sapphire_chestplate": "Sapphire Chestplate",
+	"item.scmcraft.sapphire_leggings": "Sapphire Leggings",
+	"item.scmcraft.sapphire_boots": "Sapphire Boots",
+	
+	"item.scmcraft.amethyst_helmet": "Amethyst Helmet",
+	"item.scmcraft.amethyst_chestplate": "Amethyst Chestplate",
+	"item.scmcraft.amethyst_leggings": "Amethyst Leggings",
+	"item.scmcraft.amethyst_boots": "Amethyst Boots",
+	
+	"item.scmcraft.topaz_helmet": "Topaz Helmet",
+	"item.scmcraft.topaz_chestplate": "Topaz Chestplate",
+	"item.scmcraft.topaz_leggings": "Topaz Leggings",
+	"item.scmcraft.topaz_boots": "Topaz Boots",
+	
+	"item.scmcraft.emerald_helmet": "Emerald Helmet",
+	"item.scmcraft.emerald_chestplate": "Emerald Chestplate",
+	"item.scmcraft.emerald_leggings": "Emerald Leggings",
+	"item.scmcraft.emerald_boots": "Emerald Boots",
+	
+	"item.scmcraft.mythril_helmet": "Mythril Helmet",
+	"item.scmcraft.mythril_chestplate": "Mythril Chestplate",
+	"item.scmcraft.mythril_leggings": "Mythirl Leggings",
+	"item.scmcraft.mythril_boots": "Mythril Boots"
 }

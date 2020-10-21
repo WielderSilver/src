@@ -1,22 +1,25 @@
 package com.wieldersilver.scmcraft.init;
 
 import java.util.function.Supplier;
-import net.minecraft.item.Items;
-
-import javax.naming.directory.ModificationItem;
 
 import com.wieldersilver.scmcraft.scmcraft;
 
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.HoeItem;
+import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Items;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -42,8 +45,11 @@ public class ItemInit
 	public static final Item ruby_shovel = null;
 	public static final Item ruby_pickaxe = null;
 	
-	
-	
+	//Armor
+	public static final Item ruby_helmet = null;
+	public static final Item ruby_chsetplate = null;
+	public static final Item ruby_leggings = null;
+	public static final Item ruby_boots = null;
 	
 	
 	@SubscribeEvent
@@ -92,6 +98,36 @@ public class ItemInit
 		event.getRegistry().register(new HoeItem(ModItemTier.MYTHRIL, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_hoe"));
 		event.getRegistry().register(new ShovelItem(ModItemTier.MYTHRIL, 2.5f, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_shovel"));
 		event.getRegistry().register(new PickaxeItem(ModItemTier.MYTHRIL, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_pickaxe"));
+
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_helmet"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_chestplate"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_leggings"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_boots"));
+
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_helmet"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_chestplate"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_leggings"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_boots"));
+
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_helmet"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_chestplate"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_leggings"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_boots"));
+
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_helmet"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_chestplate"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_leggings"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_boots"));
+
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_helmet"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_chestplate"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_leggings"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_boots"));
+
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.MYTHRIL, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_helmet"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.MYTHRIL, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_chestplate"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.MYTHRIL, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_leggings"));
+		event.getRegistry().register(new ArmorItem(ModArmorMaterial.MYTHRIL, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_boots"));
 
 		
 	}
@@ -178,6 +214,93 @@ public class ItemInit
 		public Ingredient getRepairMaterial() 
 		{
 			return this.repairMaterial.getValue();
+		}
+	}
+	
+	public enum ModArmorMaterial implements IArmorMaterial
+	{
+		RUBY(scmcraft.MOD_ID + ":ruby",5, new int[] {2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0F, () ->  {
+			return Ingredient.fromItems(ItemInit.ruby);
+		}),
+		SAPPHIRE(scmcraft.MOD_ID + ":sapphire",5, new int[] {2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0F, () ->  {
+			return Ingredient.fromItems(ItemInit.sapphire);
+		}),
+		TOPAZ(scmcraft.MOD_ID + ":topaz",5, new int[] {2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0F, () ->  {
+			return Ingredient.fromItems(ItemInit.topaz);
+		}),
+		AMETHYST(scmcraft.MOD_ID + ":amethyst",5, new int[] {2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0F, () ->  {
+			return Ingredient.fromItems(ItemInit.sapphire);
+		}),
+		EMERALD(scmcraft.MOD_ID + ":emerald",5, new int[] {2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0F, () ->  {
+			return Ingredient.fromItems(ItemInit.sapphire);
+		}),
+		MYTHRIL(scmcraft.MOD_ID + ":mythril",5, new int[] {2, 3, 5, 2}, 25, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0F, () ->  {
+			return Ingredient.fromItems(ItemInit.mythril_shard);
+		});
+		
+		;
+		
+		
+		
+		private static final int[] MAX_DAMAGE_ARRAY = new int[] {16, 16, 16, 16 };
+		private final String name;
+		private final int maxDamageFactor;
+		private final int[] damageReductionAmountArray;
+		private final int enchantability;
+		private final SoundEvent soundEvent;
+		private final float toughness;
+		private final LazyValue<Ingredient> repairMaterial;
+		
+		private ModArmorMaterial(String nameIn, int maxDamageFactorIn, int[] damageReductionAmountIn, int enchantabilityIn, SoundEvent soundEventIn,float toughnessIn, Supplier<Ingredient> repairMaterialIn) {
+			this.name = nameIn;
+			this.maxDamageFactor = maxDamageFactorIn;
+			this.damageReductionAmountArray = damageReductionAmountIn;
+			this.enchantability = enchantabilityIn;
+			this.soundEvent = soundEventIn;
+			this.toughness = toughnessIn;
+			this.repairMaterial = new LazyValue<>(repairMaterialIn);
+		}
+
+		@Override
+		public int getDurability(EquipmentSlotType slotIn) 
+		{
+			return MAX_DAMAGE_ARRAY[slotIn.getIndex()] * this.maxDamageFactor;
+		}
+
+		@Override
+		public int getDamageReductionAmount(EquipmentSlotType slotIn) 
+		{
+			return this.damageReductionAmountArray[slotIn.getIndex()];
+		}
+
+		@Override
+		public int getEnchantability() 
+		{
+			return this.enchantability;
+		}
+
+		@Override
+		public SoundEvent getSoundEvent() 
+		{
+			return this.soundEvent;
+		}
+
+		@Override
+		public Ingredient getRepairMaterial() 
+		{
+			return this.repairMaterial.getValue();
+		}
+
+		@Override
+		public String getName() 
+		{
+			return this.name;
+		}
+
+		@Override
+		public float getToughness() 
+		{
+			return this.toughness;
 		}
 	}
 }
