@@ -3,6 +3,7 @@ package com.wieldersilver.scmcraft.init;
 import com.wieldersilver.scmcraft.scmcraft;
 import com.wieldersilver.scmcraft.armor.ModArmorMaterial;
 import com.wieldersilver.scmcraft.tools.ModItemTier;
+import com.wieldersilver.scmcraft.tools.weapons.GreatswordItem;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -37,6 +38,8 @@ public class ItemInit
 	public static final Item ruby_axe = new AxeItem(ModItemTier.RUBY, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_axe");
 	public static final Item ruby_shovel = new ShovelItem(ModItemTier.RUBY, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_shovel");
 	public static final Item ruby_pickaxe = new PickaxeItem(ModItemTier.RUBY, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_pickaxe");
+	public static final Item ruby_greatsword = new GreatswordItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_greatsword");
+
 	
 	//Armor
 	public static final Item ruby_helmet = new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_helmet");
@@ -127,6 +130,8 @@ public class ItemInit
 		event.getRegistry().register(topaz_sword);
 		event.getRegistry().register(amethyst_sword);
 		event.getRegistry().register(mythril_sword);
+		
+		event.getRegistry().register(ruby_greatsword);
 		
 		event.getRegistry().register(ruby_helmet);
 		event.getRegistry().register(ruby_chestplate);
