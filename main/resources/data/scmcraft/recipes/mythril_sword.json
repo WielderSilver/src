@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "M",
+     "M",
+     "P"
+],
+"key": {
+    "M": {
+        "item": "scmcraft:mythril_shard"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:mythril_sword",
+   "count": 1
+   }
+}

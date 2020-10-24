@@ -1,0 +1,16 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "TTT",
+     "TTT",
+     "TTT"
+],
+"key": {
+    "T": {
+        "item": "scmcraft:topaz"
+        }
+      },
+   "result": {"item": "scmcraft:topaz_block",
+   "count": 1
+   }
+}

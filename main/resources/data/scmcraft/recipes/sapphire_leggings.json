@@ -1,0 +1,16 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "SSS",
+     "S S",
+     "S S"
+],
+"key": {
+    "S": {
+        "item": "scmcraft:sapphire"
+        }
+      },
+   "result": {"item": "scmcraft:sapphire_leggings",
+   "count": 1
+   }
+}

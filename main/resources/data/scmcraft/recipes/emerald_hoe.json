@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     " EE",
+     " P ",
+     " P "
+],
+"key": {
+    "E": {
+        "item": "minecraft:emerald"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:emerald_hoe",
+   "count": 1
+   }
+}

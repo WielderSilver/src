@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "AA ",
+     "AP ",
+     " P "
+],
+"key": {
+    "A": {
+        "item": "scmcraft:amethyst"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:amethyst_axe",
+   "count": 1
+   }
+}

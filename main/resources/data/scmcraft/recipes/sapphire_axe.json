@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "SS ",
+     "SP ",
+     " P "
+],
+"key": {
+    "S": {
+        "item": "scmcraft:sapphire"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:sapphire_axe",
+   "count": 1
+   }
+}

@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "TT ",
+     " P ",
+     " P "
+],
+"key": {
+    "T": {
+        "item": "scmcraft:topaz"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:topaz_shovel",
+   "count": 1
+   }
+}
