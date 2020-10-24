@@ -1,0 +1,14 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "A"
+],
+"key": {
+    "A": {
+        "item": "scmcraft:amethyst_block"
+        }
+      },
+   "result": {"item": "scmcraft:amethyst",
+   "count": 9
+   }
+}

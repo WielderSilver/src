@@ -1,0 +1,14 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "T"
+],
+"key": {
+    "T": {
+        "item": "scmcraft:topaz_block"
+        }
+      },
+   "result": {"item": "scmcraft:topaz",
+   "count": 9
+   }
+}
