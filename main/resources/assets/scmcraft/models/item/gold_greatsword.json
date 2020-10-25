@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "scmcraft:items/ruby_greatsword"
+    "layer0": "scmcraft:items/gold_greatsword"
   },
   "display": {
         "ground": {

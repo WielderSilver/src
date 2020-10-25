@@ -81,5 +81,14 @@
 	"item.scmcraft.mythril_helmet": "Mythril Helmet",
 	"item.scmcraft.mythril_chestplate": "Mythril Chestplate",
 	"item.scmcraft.mythril_leggings": "Mythirl Leggings",
-	"item.scmcraft.mythril_boots": "Mythril Boots"
+	"item.scmcraft.mythril_boots": "Mythril Boots",
+	
+	"item.scmcraft.ruby_greatsword": "Ruby Greatsword",
+	"item.scmcraft.sapphire_greatsword": "Sapphire Greatsword",
+	"item.scmcraft.topaz_greatsword": "Topaz Greatsword",
+	"item.scmcraft.amethyst_greatsword": "Amethyst Greatsword",
+	"item.scmcraft.emerald_greatsword": "Emerald Greatsword",
+	"item.scmcraft.iron_greatsword": "Iron Greatsword",
+	"item.scmcraft.gold_greatsword": "Gold Greatsword",
+	"item.scmcraft.diamond_greatsword": "Diamond Greatsword"
 }
