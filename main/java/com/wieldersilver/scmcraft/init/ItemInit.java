@@ -34,11 +34,11 @@ public class ItemInit
 	public static final Item pole = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("pole");
 
 	//Tools
-	public static final Item ruby_sword = new SwordItem(ModItemTier.RUBY, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_sword");
+	public static final Item ruby_sword = new SwordItem(ModItemTier.RUBY, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_sword");
 	public static final Item ruby_hoe = new HoeItem(ModItemTier.RUBY, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_hoe");
-	public static final Item ruby_axe = new AxeItem(ModItemTier.RUBY, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_axe");
-	public static final Item ruby_shovel = new ShovelItem(ModItemTier.RUBY, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_shovel");
-	public static final Item ruby_pickaxe = new PickaxeItem(ModItemTier.RUBY, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_pickaxe");
+	public static final Item ruby_axe = new AxeItem(ModItemTier.RUBY, 6, -3.1f,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_axe");
+	public static final Item ruby_shovel = new ShovelItem(ModItemTier.RUBY, 1.5f, -3.0f,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_shovel");
+	public static final Item ruby_pickaxe = new PickaxeItem(ModItemTier.RUBY, 1, -2.8f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_pickaxe");
 	public static final Item ruby_greatsword = new GreatswordItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_greatsword");
 
 	
@@ -49,11 +49,11 @@ public class ItemInit
 	public static final Item ruby_boots = new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_boots");
 	
 	//Tools
-	public static final Item topaz_sword = new SwordItem(ModItemTier.TOPAZ, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_sword");
+	public static final Item topaz_sword = new SwordItem(ModItemTier.TOPAZ, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_sword");
 	public static final Item topaz_hoe = new HoeItem(ModItemTier.TOPAZ, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_hoe");
-	public static final Item topaz_axe = new AxeItem(ModItemTier.TOPAZ, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_axe");
-	public static final Item topaz_shovel = new ShovelItem(ModItemTier.TOPAZ, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_shovel");
-	public static final Item topaz_pickaxe = new PickaxeItem(ModItemTier.TOPAZ, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_pickaxe");
+	public static final Item topaz_axe = new AxeItem(ModItemTier.TOPAZ, 6, -3.1f,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_axe");
+	public static final Item topaz_shovel = new ShovelItem(ModItemTier.TOPAZ, 1.5f, -3.0f,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_shovel");
+	public static final Item topaz_pickaxe = new PickaxeItem(ModItemTier.TOPAZ, 1, -2.8f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_pickaxe");
 	public static final Item topaz_greatsword = new GreatswordItem(ModItemTier.TOPAZ, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_greatsword");
 
 	//Armor
@@ -63,11 +63,11 @@ public class ItemInit
 	public static final Item topaz_boots = new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_boots");
 	
 	//Tools
-	public static final Item amethyst_sword = new SwordItem(ModItemTier.AMETHYST, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_sword");
+	public static final Item amethyst_sword = new SwordItem(ModItemTier.AMETHYST, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_sword");
 	public static final Item amethyst_hoe = new HoeItem(ModItemTier.AMETHYST, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_hoe");
-	public static final Item amethyst_axe = new AxeItem(ModItemTier.AMETHYST, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_axe");
-	public static final Item amethyst_shovel = new ShovelItem(ModItemTier.AMETHYST, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_shovel");
-	public static final Item amethyst_pickaxe = new PickaxeItem(ModItemTier.AMETHYST, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_pickaxe");
+	public static final Item amethyst_axe = new AxeItem(ModItemTier.AMETHYST, 6, -3.1f,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_axe");
+	public static final Item amethyst_shovel = new ShovelItem(ModItemTier.AMETHYST, 1.5f, -3.0f,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_shovel");
+	public static final Item amethyst_pickaxe = new PickaxeItem(ModItemTier.AMETHYST, 1, -2.8f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_pickaxe");
 	public static final Item amethyst_greatsword = new GreatswordItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_greatsword");
 
 	//Armor
@@ -77,11 +77,11 @@ public class ItemInit
 	public static final Item amethyst_boots = new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_boots");
 
 	//Tools
-	public static final Item sapphire_sword = new SwordItem(ModItemTier.SAPPHIRE, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_sword");
+	public static final Item sapphire_sword = new SwordItem(ModItemTier.SAPPHIRE, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_sword");
 	public static final Item sapphire_hoe = new HoeItem(ModItemTier.SAPPHIRE, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_hoe");
-	public static final Item sapphire_axe = new AxeItem(ModItemTier.SAPPHIRE, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_axe");
-	public static final Item sapphire_shovel = new ShovelItem(ModItemTier.SAPPHIRE, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_shovel");
-	public static final Item sapphire_pickaxe = new PickaxeItem(ModItemTier.SAPPHIRE, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_pickaxe");
+	public static final Item sapphire_axe = new AxeItem(ModItemTier.SAPPHIRE, 6, -3.1f,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_axe");
+	public static final Item sapphire_shovel = new ShovelItem(ModItemTier.SAPPHIRE, 1.5f, -3.0f,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_shovel");
+	public static final Item sapphire_pickaxe = new PickaxeItem(ModItemTier.SAPPHIRE, 1, -2.8f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_pickaxe");
 	public static final Item sapphire_greatsword = new GreatswordItem(ModItemTier.SAPPHIRE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_greatsword");
 
 	//Armor
@@ -91,11 +91,11 @@ public class ItemInit
 	public static final Item sapphire_boots = new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_boots");
 
 	//Tools
-	public static final Item emerald_sword = new SwordItem(ModItemTier.EMERALD, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_sword");
+	public static final Item emerald_sword = new SwordItem(ModItemTier.EMERALD, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_sword");
 	public static final Item emerald_hoe = new HoeItem(ModItemTier.EMERALD, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_hoe");
-	public static final Item emerald_axe = new AxeItem(ModItemTier.EMERALD, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_axe");
-	public static final Item emerald_shovel = new ShovelItem(ModItemTier.EMERALD, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_shovel");
-	public static final Item emerald_pickaxe = new PickaxeItem(ModItemTier.EMERALD, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_pickaxe");
+	public static final Item emerald_axe = new AxeItem(ModItemTier.EMERALD, 6, -3.1f,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_axe");
+	public static final Item emerald_shovel = new ShovelItem(ModItemTier.EMERALD, 1.5f, -3.0f,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_shovel");
+	public static final Item emerald_pickaxe = new PickaxeItem(ModItemTier.EMERALD, 1, -2.8f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_pickaxe");
 	public static final Item emerald_greatsword = new GreatswordItem(ModItemTier.EMERALD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_greatsword");
 
 	//Armor
@@ -105,11 +105,11 @@ public class ItemInit
 	public static final Item emerald_boots = new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_boots");
 
 	//Tools
-	public static final Item mythril_sword = new SwordItem(ModItemTier.MYTHRIL, 4, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_sword");
-	public static final Item mythril_hoe = new HoeItem(ModItemTier.MYTHRIL, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_hoe");
-	public static final Item mythril_axe = new AxeItem(ModItemTier.MYTHRIL, 7, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_axe");
-	public static final Item mythril_shovel = new ShovelItem(ModItemTier.MYTHRIL, 2.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_shovel");
-	public static final Item mythril_pickaxe = new PickaxeItem(ModItemTier.MYTHRIL, 2, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_pickaxe");
+	public static final Item mythril_sword = new SwordItem(ModItemTier.MYTHRIL, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_sword");
+	public static final Item mythril_hoe = new HoeItem(ModItemTier.MYTHRIL, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_hoe");
+	public static final Item mythril_axe = new AxeItem(ModItemTier.MYTHRIL, 6, -3.1f,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_axe");
+	public static final Item mythril_shovel = new ShovelItem(ModItemTier.MYTHRIL, 1.5f, -3.0f,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_shovel");
+	public static final Item mythril_pickaxe = new PickaxeItem(ModItemTier.MYTHRIL, 1, -2.8f, new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_pickaxe");
 	public static final Item mythril_greatsword = new GreatswordItem(ModItemTier.MYTHRIL, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_greatsword");
 
 	//Armor
@@ -122,7 +122,8 @@ public class ItemInit
 	public static final Item gold_greatsword = new GreatswordItem(ItemTier.GOLD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("gold_greatsword");
 	public static final Item diamond_greatsword = new GreatswordItem(ItemTier.DIAMOND, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("diamond_greatsword");
 	public static final Item iron_greatsword = new GreatswordItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("iron_greatsword");
-
+	//stone_greatsword here
+	//wooden_greatsword here
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event)
