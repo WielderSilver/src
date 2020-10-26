@@ -122,6 +122,8 @@ public class ItemInit
 	public static final Item gold_greatsword = new GreatswordItem(ItemTier.GOLD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("gold_greatsword");
 	public static final Item diamond_greatsword = new GreatswordItem(ItemTier.DIAMOND, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("diamond_greatsword");
 	public static final Item iron_greatsword = new GreatswordItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("iron_greatsword");
+	public static final Item stone_greatsword = new GreatswordItem(ItemTier.STONE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("stone_greatsword");
+	public static final Item wooden_greatsword = new GreatswordItem(ItemTier.WOOD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("wood_greatsword");
 
 	
 	@SubscribeEvent
@@ -150,6 +152,8 @@ public class ItemInit
 		event.getRegistry().register(iron_greatsword);
 		event.getRegistry().register(diamond_greatsword);
 		event.getRegistry().register(gold_greatsword);
+		event.getRegistry().register(stone_greatsword);
+		event.getRegistry().register(wooden_greatsword);
 		
 		event.getRegistry().register(ruby_helmet);
 		event.getRegistry().register(ruby_chestplate);
