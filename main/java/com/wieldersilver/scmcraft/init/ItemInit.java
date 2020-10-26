@@ -4,6 +4,7 @@ import com.wieldersilver.scmcraft.scmcraft;
 import com.wieldersilver.scmcraft.armor.ModArmorMaterial;
 import com.wieldersilver.scmcraft.tools.ModItemTier;
 import com.wieldersilver.scmcraft.tools.weapons.GreatswordItem;
+import com.wieldersilver.scmcraft.tools.weapons.RapierItem;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -40,6 +41,7 @@ public class ItemInit
 	public static final Item ruby_shovel = new ShovelItem(ModItemTier.RUBY, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_shovel");
 	public static final Item ruby_pickaxe = new PickaxeItem(ModItemTier.RUBY, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_pickaxe");
 	public static final Item ruby_greatsword = new GreatswordItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_greatsword");
+	public static final Item ruby_rapier = new RapierItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_rapier");
 
 	
 	//Armor
@@ -154,6 +156,9 @@ public class ItemInit
 		event.getRegistry().register(gold_greatsword);
 		event.getRegistry().register(stone_greatsword);
 		event.getRegistry().register(wooden_greatsword);
+		
+		event.getRegistry().register(ruby_rapier);
+
 		
 		event.getRegistry().register(ruby_helmet);
 		event.getRegistry().register(ruby_chestplate);
