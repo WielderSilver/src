@@ -12,22 +12,22 @@ import net.minecraft.util.LazyValue;
 public enum ModItemTier implements IItemTier
 {
 	//int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Supplier<Ingredient> repairMaterial
-	RUBY(2, 175, 6.0F, 1.0F, 14, () -> {
+	RUBY(2, 175, 6.0F, 2.0F, 14, () -> {
 		return Ingredient.fromItems(ItemInit.ruby);
 	}),
-	SAPPHIRE(2, 175, 6.0F, 1.0F, 14, () -> {
+	SAPPHIRE(2, 175, 6.0F, 2.0F, 14, () -> {
 		return Ingredient.fromItems(ItemInit.sapphire);
 	}),
-	AMETHYST(2, 175, 6.0F, 1.0F, 14, () -> {
+	AMETHYST(2, 175, 6.0F, 2.0F, 14, () -> {
 		return Ingredient.fromItems(ItemInit.amethyst);
 	}),
-	TOPAZ(2, 175, 6.0F, 1.0F, 14, () -> {
+	TOPAZ(2, 175, 6.0F, 2.0F, 14, () -> {
 		return Ingredient.fromItems(ItemInit.topaz);
 	}),
-	MYTHRIL(0, 32, 10.0F, -1.0F, 22, () -> {
+	MYTHRIL(0, 32, 10.0F, 0.0F, 22, () -> {
 		return Ingredient.fromItems(ItemInit.mythril_shard);
 	}),
-	EMERALD(2, 175, 6.0F, 1.0F, 14, () -> {
+	EMERALD(2, 175, 6.0F, 2.0F, 14, () -> {
 		return Ingredient.fromItems(Items.EMERALD);
 	}),
 	;

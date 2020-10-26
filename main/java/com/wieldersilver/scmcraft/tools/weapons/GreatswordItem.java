@@ -29,10 +29,10 @@ import net.minecraft.world.World;
  */
 public class GreatswordItem extends TieredItem {
 	
-	private static final float ATTACK_DAMAGE = 5.5f;
+	private static final float ATTACK_DAMAGE = 6.5f;
+	private static final float ATTACK_SPEED = -3f;
 	
 	private final float attackDamage;
-	private final float attackSpeed = -3f;
 	
 	
 	public GreatswordItem(IItemTier tier, Item.Properties builder)
@@ -99,7 +99,7 @@ public class GreatswordItem extends TieredItem {
 	      Multimap<String, AttributeModifier> multimap = HashMultimap.create();
 	      if (equipmentSlot == EquipmentSlotType.MAINHAND) {
 	         multimap.put(SharedMonsterAttributes.ATTACK_DAMAGE.getName(), new AttributeModifier(ATTACK_DAMAGE_MODIFIER, "Weapon modifier", (double)this.getAttackDamage(), AttributeModifier.Operation.ADDITION));
-	         multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", (double)attackSpeed, AttributeModifier.Operation.ADDITION));
+	         multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", (double)ATTACK_SPEED, AttributeModifier.Operation.ADDITION));
 	      }
 
 	      return multimap;
