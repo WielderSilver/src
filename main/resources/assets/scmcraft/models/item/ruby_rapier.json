@@ -3,16 +3,28 @@
 	"textures": {
 		"layer0": "scmcraft:items/ruby_rapier"
 	},
-"display": {
-	"firstperson_righthand": {
-            "rotation": [ 0, 90, 40 ],
+	"display": {
+		"firstperson_righthand": {
+            "rotation": [ 0, -90, 40 ],
             "translation": [ 0, 10, 2 ],
             "scale": [ 1, 1, 1 ]
         },
         "firstperson_lefthand": {
-            "rotation": [ 0, -90, -40 ],
+            "rotation": [ 0, 90, -40 ],
             "translation": [ 0, 10, 2],
             "scale": [ 1, 1, 1 ]
-        }
+        },
+		"thirdperson_righthand":
+		{
+			"rotation": [ -60, -90, 50 ],
+            "translation": [ 0, 0, -5.5 ],
+            "scale": [ 1, 1, 1 ]
+		},
+		"thirdperson_lefthand":
+		{
+			"rotation": [ -60, 90, -50 ],
+            "translation": [ 0, 0, -5.5 ],
+            "scale": [ 1, 1, 1 ]
+		}
     }
 }
