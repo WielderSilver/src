@@ -90,5 +90,18 @@
 	"item.scmcraft.emerald_greatsword": "Emerald Greatsword",
 	"item.scmcraft.iron_greatsword": "Iron Greatsword",
 	"item.scmcraft.gold_greatsword": "Gold Greatsword",
-	"item.scmcraft.diamond_greatsword": "Diamond Greatsword"
+	"item.scmcraft.diamond_greatsword": "Diamond Greatsword",
+	"item.scmcraft.wood_greatsword": "Wood Greatsword",
+	"item.scmcraft.stone_greatsword": "Stone Greatsword",
+	
+	"item.scmcraft.ruby_rapier": "Ruby Rapier",
+	"item.scmcraft.sapphire_rapier": "Sapphire Rapier",
+	"item.scmcraft.topaz_rapier": "Topaz Rapier",
+	"item.scmcraft.amethyst_rapier": "Amethyst Rapier",
+	"item.scmcraft.emerald_rapier": "Emerald Rapier",
+	"item.scmcraft.iron_rapier": "Iron Rapier",
+	"item.scmcraft.gold_rapier": "Gold Rapier",
+	"item.scmcraft.diamond_rapier": "Diamond Rapier",
+	"item.scmcraft.wood_rapier": "Wood Rapier",
+	"item.scmcraft.stone_rapier": "Stone Rapier"
 }

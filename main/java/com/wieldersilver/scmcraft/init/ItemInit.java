@@ -58,6 +58,7 @@ public class ItemInit
 	public static final Item topaz_shovel = new ShovelItem(ModItemTier.TOPAZ, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_shovel");
 	public static final Item topaz_pickaxe = new PickaxeItem(ModItemTier.TOPAZ, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_pickaxe");
 	public static final Item topaz_greatsword = new GreatswordItem(ModItemTier.TOPAZ, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_greatsword");
+	public static final Item topaz_rapier = new RapierItem(ModItemTier.TOPAZ, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_rapier");
 
 	//Armor
 	public static final Item topaz_helmet = new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_helmet");
@@ -72,7 +73,9 @@ public class ItemInit
 	public static final Item amethyst_shovel = new ShovelItem(ModItemTier.AMETHYST, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_shovel");
 	public static final Item amethyst_pickaxe = new PickaxeItem(ModItemTier.AMETHYST, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_pickaxe");
 	public static final Item amethyst_greatsword = new GreatswordItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_greatsword");
+	public static final Item amethyst_rapier = new RapierItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_rapier");
 
+	
 	//Armor
 	public static final Item amethyst_helmet = new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_helmet");
 	public static final Item amethyst_chestplate = new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_chestplate");
@@ -86,6 +89,7 @@ public class ItemInit
 	public static final Item sapphire_shovel = new ShovelItem(ModItemTier.SAPPHIRE, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_shovel");
 	public static final Item sapphire_pickaxe = new PickaxeItem(ModItemTier.SAPPHIRE, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_pickaxe");
 	public static final Item sapphire_greatsword = new GreatswordItem(ModItemTier.SAPPHIRE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_greatsword");
+	public static final Item sapphire_rapier = new RapierItem(ModItemTier.SAPPHIRE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_rapier");
 
 	//Armor
 	public static final Item sapphire_helmet = new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_helmet");
@@ -100,6 +104,7 @@ public class ItemInit
 	public static final Item emerald_shovel = new ShovelItem(ModItemTier.EMERALD, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_shovel");
 	public static final Item emerald_pickaxe = new PickaxeItem(ModItemTier.EMERALD, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_pickaxe");
 	public static final Item emerald_greatsword = new GreatswordItem(ModItemTier.EMERALD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_greatsword");
+	public static final Item emerald_rapier = new RapierItem(ModItemTier.EMERALD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_rapier");
 
 	//Armor
 	public static final Item emerald_helmet = new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_helmet");
@@ -114,6 +119,7 @@ public class ItemInit
 	public static final Item mythril_shovel = new ShovelItem(ModItemTier.MYTHRIL, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_shovel");
 	public static final Item mythril_pickaxe = new PickaxeItem(ModItemTier.MYTHRIL, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_pickaxe");
 	public static final Item mythril_greatsword = new GreatswordItem(ModItemTier.MYTHRIL, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_greatsword");
+	public static final Item mythril_rapier = new RapierItem(ModItemTier.MYTHRIL, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_rapier");
 
 	//Armor
 	public static final Item mythril_helmet = new ArmorItem(ModArmorMaterial.MYTHRIL, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_helmet");
@@ -127,6 +133,11 @@ public class ItemInit
 	public static final Item iron_greatsword = new GreatswordItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("iron_greatsword");
 	public static final Item stone_greatsword = new StoneGreatswordItem(ItemTier.STONE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("stone_greatsword");
 	public static final Item wooden_greatsword = new GreatswordItem(ItemTier.WOOD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("wood_greatsword");
+	public static final Item gold_rapier = new GreatswordItem(ItemTier.GOLD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("gold_rapier");
+	public static final Item diamond_rapier = new GreatswordItem(ItemTier.DIAMOND, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("diamond_rapier");
+	public static final Item iron_rapier = new GreatswordItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("iron_rapier");
+	public static final Item stone_rapier = new StoneGreatswordItem(ItemTier.STONE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("stone_rapier");
+	public static final Item wooden_rapier = new GreatswordItem(ItemTier.WOOD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("wood_rapier");
 
 	
 	@SubscribeEvent
@@ -159,6 +170,15 @@ public class ItemInit
 		event.getRegistry().register(wooden_greatsword);
 		
 		event.getRegistry().register(ruby_rapier);
+		event.getRegistry().register(topaz_rapier);
+		event.getRegistry().register(sapphire_rapier);
+		event.getRegistry().register(amethyst_rapier);
+		event.getRegistry().register(emerald_rapier);
+		event.getRegistry().register(iron_rapier);
+		event.getRegistry().register(diamond_rapier);
+		event.getRegistry().register(gold_rapier);
+		event.getRegistry().register(stone_rapier);
+		event.getRegistry().register(wooden_rapier);
 
 		
 		event.getRegistry().register(ruby_helmet);
