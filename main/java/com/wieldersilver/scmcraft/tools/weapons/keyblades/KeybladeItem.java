@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.wieldersilver.scmcraft.tools.weapons;
+package com.wieldersilver.scmcraft.tools.weapons.keyblades;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
@@ -27,15 +27,15 @@ import net.minecraft.world.World;
  * @author Silverbeam
  *
  */
-public class RapierItem extends TieredItem {
+public class KeybladeItem extends TieredItem {
 	
-	private static final float ATTACK_DAMAGE = -2.5f;
-	private static final float ATTACK_SPEED = 5.0f;
+	private static final float ATTACK_DAMAGE = 0f;
+	private static final float ATTACK_SPEED = 0f;
 	
 	private final float attackDamage;
 	
 	
-	public RapierItem(IItemTier tier, Item.Properties builder)
+	public KeybladeItem(IItemTier tier, Item.Properties builder)
 	{
 		super(tier, builder);
 		

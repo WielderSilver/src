@@ -6,6 +6,9 @@ import com.wieldersilver.scmcraft.tools.ModItemTier;
 import com.wieldersilver.scmcraft.tools.weapons.GreatswordItem;
 import com.wieldersilver.scmcraft.tools.weapons.RapierItem;
 import com.wieldersilver.scmcraft.tools.weapons.StoneGreatswordItem;
+import com.wieldersilver.scmcraft.tools.weapons.keyblades.KingdomKeyDItem;
+import com.wieldersilver.scmcraft.tools.weapons.keyblades.KingdomKeyItem;
+import com.wieldersilver.scmcraft.tools.weapons.keyblades.LadyLuckItem;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -139,6 +142,11 @@ public class ItemInit
 	public static final Item stone_rapier = new StoneGreatswordItem(ItemTier.STONE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("stone_rapier");
 	public static final Item wooden_rapier = new GreatswordItem(ItemTier.WOOD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("wood_rapier");
 
+	//Tools
+	public static final Item kingdom_key = new KingdomKeyItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("kingdom_key");
+	public static final Item kingdom_key_d = new KingdomKeyDItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("kingdom_key_d");
+	public static final Item lady_luck = new LadyLuckItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("lady_luck");
+
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event)
@@ -241,5 +249,9 @@ public class ItemInit
 		event.getRegistry().register(topaz_hoe);
 		event.getRegistry().register(amethyst_hoe);
 		event.getRegistry().register(mythril_hoe);
+		
+		event.getRegistry().register(kingdom_key);
+		event.getRegistry().register(kingdom_key_d);
+		event.getRegistry().register(lady_luck);
 	}
 }
