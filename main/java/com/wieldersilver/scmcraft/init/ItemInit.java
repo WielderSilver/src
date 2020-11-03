@@ -47,7 +47,6 @@ public class ItemInit
 	public static final Item ruby_greatsword = new GreatswordItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_greatsword");
 	public static final Item ruby_rapier = new RapierItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_rapier");
 
-	
 	//Armor
 	public static final Item ruby_helmet = new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_helmet");
 	public static final Item ruby_chestplate = new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_chestplate");
@@ -78,7 +77,6 @@ public class ItemInit
 	public static final Item amethyst_greatsword = new GreatswordItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_greatsword");
 	public static final Item amethyst_rapier = new RapierItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_rapier");
 
-	
 	//Armor
 	public static final Item amethyst_helmet = new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_helmet");
 	public static final Item amethyst_chestplate = new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_chestplate");
@@ -142,11 +140,22 @@ public class ItemInit
 	public static final Item stone_rapier = new StoneGreatswordItem(ItemTier.STONE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("stone_rapier");
 	public static final Item wooden_rapier = new GreatswordItem(ItemTier.WOOD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("wood_rapier");
 
-	//Tools
+	//Keyblades
 	public static final Item kingdom_key = new KingdomKeyItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("kingdom_key");
-	public static final Item kingdom_key_d = new KingdomKeyDItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("kingdom_key_d");
-	public static final Item lady_luck = new LadyLuckItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("lady_luck");
+	public static final Item kingdom_key_hilt = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("kingdom_key_hilt");
+	public static final Item kingdom_key_blade = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("kingdom_key_blade");
+	public static final Item kingdom_key_point = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("kingdom_key_point");
 
+	public static final Item kingdom_key_d = new KingdomKeyDItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("kingdom_key_d");
+	public static final Item kingdom_key_d_hilt = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("kingdom_key_d_hilt");
+	public static final Item kingdom_key_d_blade = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("kingdom_key_d_blade");
+	public static final Item kingdom_key_d_point = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("kingdom_key_d_point");
+	
+	public static final Item lady_luck = new LadyLuckItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("lady_luck");
+	public static final Item lady_luck_hilt = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("lady_luck_hilt");
+	public static final Item lady_luck_blade = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("lady_luck_blade");
+	public static final Item lady_luck_point = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("lady_luck_point");
+	
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> event)
@@ -253,7 +262,18 @@ public class ItemInit
 		event.getRegistry().register(mythril_hoe);
 		
 		event.getRegistry().register(kingdom_key);
+		event.getRegistry().register(kingdom_key_hilt);
+		event.getRegistry().register(kingdom_key_blade);
+		event.getRegistry().register(kingdom_key_point);
+		
 		event.getRegistry().register(kingdom_key_d);
+		event.getRegistry().register(kingdom_key_d_hilt);
+		event.getRegistry().register(kingdom_key_d_blade);
+		event.getRegistry().register(kingdom_key_d_point);
+		
 		event.getRegistry().register(lady_luck);
+		event.getRegistry().register(lady_luck_hilt);
+		event.getRegistry().register(lady_luck_blade);
+		event.getRegistry().register(lady_luck_point);
 	}
 }
