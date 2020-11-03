@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "  A",
+     " A ",
+     "P  "
+],
+"key": {
+    "S": {
+        "item": "scmcraft:amethyst"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:amethyst_rapier",
+   "count": 1
+   }
+}

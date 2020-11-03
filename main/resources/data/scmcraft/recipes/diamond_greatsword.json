@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "D",
+     "D",
+     "P"
+],
+"key": {
+    "D": {
+        "item": "minecraft:diamond_block"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:diamond_greatsword",
+   "count": 1
+   }
+}

@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "  G",
+     " G ",
+     "P  "
+],
+"key": {
+    "G": {
+        "item": "minecraft:gold_ingot"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:gold_rapier",
+   "count": 1
+   }
+}

@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "  R",
+     " R ",
+     "P  "
+],
+"key": {
+    "R": {
+        "item": "scmcraft:ruby"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:ruby_rapier",
+   "count": 1
+   }
+}

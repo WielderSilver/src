@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "  I",
+     " I ",
+     "P  "
+],
+"key": {
+    "I": {
+        "item": "minecraft:iron_ingot"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:iron_rapier",
+   "count": 1
+   }
+}

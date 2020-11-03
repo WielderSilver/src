@@ -1,0 +1,22 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "L",
+     "O",
+     "P"
+],
+"key": {
+    "L": {
+        "item": "minecraft:oak_leaves"
+        },
+    "O": {
+        "item": "minecraft:oak_log"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:wood_greatsword",
+   "count": 1
+   }
+}

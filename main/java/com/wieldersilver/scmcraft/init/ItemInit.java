@@ -171,6 +171,7 @@ public class ItemInit
 		event.getRegistry().register(sapphire_greatsword);
 		event.getRegistry().register(amethyst_greatsword);
 		event.getRegistry().register(emerald_greatsword);
+		event.getRegistry().register(mythril_greatsword);
 		event.getRegistry().register(iron_greatsword);
 		event.getRegistry().register(diamond_greatsword);
 		event.getRegistry().register(gold_greatsword);
@@ -182,6 +183,7 @@ public class ItemInit
 		event.getRegistry().register(sapphire_rapier);
 		event.getRegistry().register(amethyst_rapier);
 		event.getRegistry().register(emerald_rapier);
+		event.getRegistry().register(mythril_rapier);
 		event.getRegistry().register(iron_rapier);
 		event.getRegistry().register(diamond_rapier);
 		event.getRegistry().register(gold_rapier);

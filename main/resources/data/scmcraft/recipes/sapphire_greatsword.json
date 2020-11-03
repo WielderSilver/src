@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "S",
+     "S",
+     "P"
+],
+"key": {
+    "S": {
+        "item": "scmcraft:sapphire_block"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:sapphire_greatsword",
+   "count": 1
+   }
+}

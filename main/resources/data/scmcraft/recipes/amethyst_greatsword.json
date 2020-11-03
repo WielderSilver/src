@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "A",
+     "A",
+     "P"
+],
+"key": {
+    "A": {
+        "item": "scmcraft:amethyst_block"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:amethyst_greatsword",
+   "count": 1
+   }
+}

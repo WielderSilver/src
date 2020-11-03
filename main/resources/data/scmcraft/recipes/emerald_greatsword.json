@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "E",
+     "E",
+     "P"
+],
+"key": {
+    "E": {
+        "item": "minecraft:emerald_block"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:emerald_greatsword",
+   "count": 1
+   }
+}

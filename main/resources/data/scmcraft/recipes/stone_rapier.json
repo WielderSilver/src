@@ -1,0 +1,22 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "  C",
+     "CS ",
+     "PG "
+],
+"key": {
+    "C": {
+        "item": "minecraft:cobblestone"
+        },
+    "G": {
+        "item": "minecraft:gold_ingot"
+        },
+    "P": {
+         "item": "scmcraft:pole"
+         }
+   },
+   "result": {"item": "scmcraft:stone_rapier",
+   "count": 1
+   }
+}
