@@ -89,6 +89,7 @@
 	"item.scmcraft.amethyst_greatsword": "Amethyst Greatsword",
 	"item.scmcraft.emerald_greatsword": "Emerald Greatsword",
 	"item.scmcraft.iron_greatsword": "Iron Greatsword",
+	"item.scmcraft.mythril_greatsword": "Mythril Greatsword",
 	"item.scmcraft.gold_greatsword": "Gold Greatsword",
 	"item.scmcraft.diamond_greatsword": "Diamond Greatsword",
 	"item.scmcraft.wood_greatsword": "Wooden Greatsword",
@@ -100,8 +101,25 @@
 	"item.scmcraft.amethyst_rapier": "Amethyst Rapier",
 	"item.scmcraft.emerald_rapier": "Emerald Rapier",
 	"item.scmcraft.iron_rapier": "Iron Rapier",
+	"item.scmcraft.mythril_rapier": "Mythril Rapier",
 	"item.scmcraft.gold_rapier": "Gold Rapier",
 	"item.scmcraft.diamond_rapier": "Diamond Rapier",
 	"item.scmcraft.wood_rapier": "Wooden Rapier",
-	"item.scmcraft.stone_rapier": "Stone Rapier"
+	"item.scmcraft.stone_rapier": "Stone Rapier",
+	
+	"item.scmcraft.kingdom_key": "Kingdom Key",
+	"item.scmcraft.kingdom_key_hilt": "Kingdom Key Hilt",
+	"item.scmcraft.kingdom_key_blade": "Kingdom Key Blade",
+	"item.scmcraft.kingdom_key_point": "Kingdom Key Point",
+	
+	"item.scmcraft.kingdom_key_d": "Kingdom Key D",
+	"item.scmcraft.kingdom_key_d_hilt": "Kingdom Key D Hilt",
+	"item.scmcraft.kingdom_key_d_blade": "Kingdom Key D Blade",
+	"item.scmcraft.kingdom_key_d_point": "Kingdom Key D Point",
+	
+	"item.scmcraft.lady_luck": "Lady Luck",
+	"item.scmcraft.lady_luck_hilt": "Lady Luck Hilt",
+	"item.scmcraft.lady_luck_blade": "Lady Luck Blade",
+	"item.scmcraft.lady_luck_point": "Lady Luck Point"
+	
 }
