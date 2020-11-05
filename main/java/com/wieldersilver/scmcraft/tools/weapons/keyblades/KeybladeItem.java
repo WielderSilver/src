@@ -29,7 +29,7 @@ import net.minecraft.world.World;
  */
 public class KeybladeItem extends TieredItem {
 	
-	private static final float ATTACK_DAMAGE = 0f;
+	private static final float ATTACK_DAMAGE = 2f;
 	private static final float ATTACK_SPEED = 0f;
 	
 	private final float attackDamage;
