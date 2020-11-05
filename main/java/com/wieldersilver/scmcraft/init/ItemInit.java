@@ -3,8 +3,13 @@ package com.wieldersilver.scmcraft.init;
 import com.wieldersilver.scmcraft.scmcraft;
 import com.wieldersilver.scmcraft.armor.ModArmorMaterial;
 import com.wieldersilver.scmcraft.tools.ModItemTier;
+import com.wieldersilver.scmcraft.tools.SCMAxeItem;
+import com.wieldersilver.scmcraft.tools.SCMHoeItem;
+import com.wieldersilver.scmcraft.tools.SCMPickaxeItem;
+import com.wieldersilver.scmcraft.tools.SCMShovelItem;
 import com.wieldersilver.scmcraft.tools.weapons.GreatswordItem;
 import com.wieldersilver.scmcraft.tools.weapons.RapierItem;
+import com.wieldersilver.scmcraft.tools.weapons.SCMSwordItem;
 import com.wieldersilver.scmcraft.tools.weapons.StoneGreatswordItem;
 import com.wieldersilver.scmcraft.tools.weapons.keyblades.KingdomKeyDItem;
 import com.wieldersilver.scmcraft.tools.weapons.keyblades.KingdomKeyItem;
@@ -12,14 +17,9 @@ import com.wieldersilver.scmcraft.tools.weapons.keyblades.LadyLuckItem;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemTier;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -39,11 +39,11 @@ public class ItemInit
 	public static final Item pole = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("pole");
 
 	//Tools
-	public static final Item ruby_sword = new SwordItem(ModItemTier.RUBY, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_sword");
-	public static final Item ruby_hoe = new HoeItem(ModItemTier.RUBY, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_hoe");
-	public static final Item ruby_axe = new AxeItem(ModItemTier.RUBY, 6, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_axe");
-	public static final Item ruby_shovel = new ShovelItem(ModItemTier.RUBY, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_shovel");
-	public static final Item ruby_pickaxe = new PickaxeItem(ModItemTier.RUBY, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_pickaxe");
+	public static final Item ruby_sword = new SCMSwordItem(ModItemTier.RUBY, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_sword");
+	public static final Item ruby_hoe = new SCMHoeItem(ModItemTier.RUBY, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_hoe");
+	public static final Item ruby_axe = new SCMAxeItem(ModItemTier.RUBY, 6, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_axe");
+	public static final Item ruby_shovel = new SCMShovelItem(ModItemTier.RUBY, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_shovel");
+	public static final Item ruby_pickaxe = new SCMPickaxeItem(ModItemTier.RUBY, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("ruby_pickaxe");
 	public static final Item ruby_greatsword = new GreatswordItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_greatsword");
 	public static final Item ruby_rapier = new RapierItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_rapier");
 
@@ -54,11 +54,11 @@ public class ItemInit
 	public static final Item ruby_boots = new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_boots");
 	
 	//Tools
-	public static final Item topaz_sword = new SwordItem(ModItemTier.TOPAZ, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_sword");
-	public static final Item topaz_hoe = new HoeItem(ModItemTier.TOPAZ, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_hoe");
-	public static final Item topaz_axe = new AxeItem(ModItemTier.TOPAZ, 6, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_axe");
-	public static final Item topaz_shovel = new ShovelItem(ModItemTier.TOPAZ, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_shovel");
-	public static final Item topaz_pickaxe = new PickaxeItem(ModItemTier.TOPAZ, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_pickaxe");
+	public static final Item topaz_sword = new SCMSwordItem(ModItemTier.TOPAZ, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_sword");
+	public static final Item topaz_hoe = new SCMHoeItem(ModItemTier.TOPAZ, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_hoe");
+	public static final Item topaz_axe = new SCMAxeItem(ModItemTier.TOPAZ, 6, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_axe");
+	public static final Item topaz_shovel = new SCMShovelItem(ModItemTier.TOPAZ, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_shovel");
+	public static final Item topaz_pickaxe = new SCMPickaxeItem(ModItemTier.TOPAZ, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("topaz_pickaxe");
 	public static final Item topaz_greatsword = new GreatswordItem(ModItemTier.TOPAZ, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_greatsword");
 	public static final Item topaz_rapier = new RapierItem(ModItemTier.TOPAZ, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_rapier");
 
@@ -69,11 +69,11 @@ public class ItemInit
 	public static final Item topaz_boots = new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_boots");
 	
 	//Tools
-	public static final Item amethyst_sword = new SwordItem(ModItemTier.AMETHYST, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_sword");
-	public static final Item amethyst_hoe = new HoeItem(ModItemTier.AMETHYST, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_hoe");
-	public static final Item amethyst_axe = new AxeItem(ModItemTier.AMETHYST, 6, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_axe");
-	public static final Item amethyst_shovel = new ShovelItem(ModItemTier.AMETHYST, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_shovel");
-	public static final Item amethyst_pickaxe = new PickaxeItem(ModItemTier.AMETHYST, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_pickaxe");
+	public static final Item amethyst_sword = new SCMSwordItem(ModItemTier.AMETHYST, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_sword");
+	public static final Item amethyst_hoe = new SCMHoeItem(ModItemTier.AMETHYST, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_hoe");
+	public static final Item amethyst_axe = new SCMAxeItem(ModItemTier.AMETHYST, 6, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_axe");
+	public static final Item amethyst_shovel = new SCMShovelItem(ModItemTier.AMETHYST, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_shovel");
+	public static final Item amethyst_pickaxe = new SCMPickaxeItem(ModItemTier.AMETHYST, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("amethyst_pickaxe");
 	public static final Item amethyst_greatsword = new GreatswordItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_greatsword");
 	public static final Item amethyst_rapier = new RapierItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_rapier");
 
@@ -84,11 +84,11 @@ public class ItemInit
 	public static final Item amethyst_boots = new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_boots");
 
 	//Tools
-	public static final Item sapphire_sword = new SwordItem(ModItemTier.SAPPHIRE, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_sword");
-	public static final Item sapphire_hoe = new HoeItem(ModItemTier.SAPPHIRE, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_hoe");
-	public static final Item sapphire_axe = new AxeItem(ModItemTier.SAPPHIRE, 6, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_axe");
-	public static final Item sapphire_shovel = new ShovelItem(ModItemTier.SAPPHIRE, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_shovel");
-	public static final Item sapphire_pickaxe = new PickaxeItem(ModItemTier.SAPPHIRE, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_pickaxe");
+	public static final Item sapphire_sword = new SCMSwordItem(ModItemTier.SAPPHIRE, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_sword");
+	public static final Item sapphire_hoe = new SCMHoeItem(ModItemTier.SAPPHIRE, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_hoe");
+	public static final Item sapphire_axe = new SCMAxeItem(ModItemTier.SAPPHIRE, 6, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_axe");
+	public static final Item sapphire_shovel = new SCMShovelItem(ModItemTier.SAPPHIRE, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_shovel");
+	public static final Item sapphire_pickaxe = new SCMPickaxeItem(ModItemTier.SAPPHIRE, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("sapphire_pickaxe");
 	public static final Item sapphire_greatsword = new GreatswordItem(ModItemTier.SAPPHIRE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_greatsword");
 	public static final Item sapphire_rapier = new RapierItem(ModItemTier.SAPPHIRE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_rapier");
 
@@ -99,11 +99,11 @@ public class ItemInit
 	public static final Item sapphire_boots = new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_boots");
 
 	//Tools
-	public static final Item emerald_sword = new SwordItem(ModItemTier.EMERALD, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_sword");
-	public static final Item emerald_hoe = new HoeItem(ModItemTier.EMERALD, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_hoe");
-	public static final Item emerald_axe = new AxeItem(ModItemTier.EMERALD, 6, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_axe");
-	public static final Item emerald_shovel = new ShovelItem(ModItemTier.EMERALD, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_shovel");
-	public static final Item emerald_pickaxe = new PickaxeItem(ModItemTier.EMERALD, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_pickaxe");
+	public static final Item emerald_sword = new SCMSwordItem(ModItemTier.EMERALD, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_sword");
+	public static final Item emerald_hoe = new SCMHoeItem(ModItemTier.EMERALD, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_hoe");
+	public static final Item emerald_axe = new SCMAxeItem(ModItemTier.EMERALD, 6, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_axe");
+	public static final Item emerald_shovel = new SCMShovelItem(ModItemTier.EMERALD, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_shovel");
+	public static final Item emerald_pickaxe = new SCMPickaxeItem(ModItemTier.EMERALD, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("emerald_pickaxe");
 	public static final Item emerald_greatsword = new GreatswordItem(ModItemTier.EMERALD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_greatsword");
 	public static final Item emerald_rapier = new RapierItem(ModItemTier.EMERALD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_rapier");
 
@@ -114,11 +114,11 @@ public class ItemInit
 	public static final Item emerald_boots = new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_boots");
 
 	//Tools
-	public static final Item mythril_sword = new SwordItem(ModItemTier.MYTHRIL, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_sword");
-	public static final Item mythril_hoe = new HoeItem(ModItemTier.MYTHRIL, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_hoe");
-	public static final Item mythril_axe = new AxeItem(ModItemTier.MYTHRIL, 6, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_axe");
-	public static final Item mythril_shovel = new ShovelItem(ModItemTier.MYTHRIL, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_shovel");
-	public static final Item mythril_pickaxe = new PickaxeItem(ModItemTier.MYTHRIL, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_pickaxe");
+	public static final Item mythril_sword = new SCMSwordItem(ModItemTier.MYTHRIL, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_sword");
+	public static final Item mythril_hoe = new SCMHoeItem(ModItemTier.MYTHRIL, -1.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_hoe");
+	public static final Item mythril_axe = new SCMAxeItem(ModItemTier.MYTHRIL, 6, -3.1F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_axe");
+	public static final Item mythril_shovel = new SCMShovelItem(ModItemTier.MYTHRIL, 1.5F, -3.0F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_shovel");
+	public static final Item mythril_pickaxe = new SCMPickaxeItem(ModItemTier.MYTHRIL, 1, -2.8F,new Item.Properties().group(ItemGroup.TOOLS)).setRegistryName("mythril_pickaxe");
 	public static final Item mythril_greatsword = new GreatswordItem(ModItemTier.MYTHRIL, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_greatsword");
 	public static final Item mythril_rapier = new RapierItem(ModItemTier.MYTHRIL, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_rapier");
 

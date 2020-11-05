@@ -21,6 +21,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.TieredItem;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 /**
@@ -30,7 +31,8 @@ import net.minecraft.world.World;
 public class KeybladeItem extends TieredItem {
 	
 	private static final float ATTACK_DAMAGE = 2f;
-	private static final float ATTACK_SPEED = 0f;
+	private static final float ATTACK_SPEED = 10f;
+	private static final float BOUNCE_SPEED = 0.5f;
 	
 	private final float attackDamage;
 	
@@ -69,6 +71,21 @@ public class KeybladeItem extends TieredItem {
 	      stack.damageItem(1, attacker, (p_220045_0_) -> {
 	         p_220045_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 	      });
+	      
+	      attacker.addVelocity(0, BOUNCE_SPEED, 0);
+	      attacker.velocityChanged = true;
+	      
+	      //Direction d = attacker.getAdjustedHorizontalFacing().getOpposite();
+	      Vec3d targetVec = target.getPositionVector();
+	      Vec3d attackerVec = attacker.getPositionVector();
+	      float multiplier = -0.1f;
+	      
+	      float xVel = (float) (targetVec.getX() - attackerVec.getX());
+	      float zVel = (float) (targetVec.getZ() - attackerVec.getZ());
+	      
+	      target.addVelocity(xVel * multiplier, target.onGround ? 0 : BOUNCE_SPEED, zVel * multiplier);
+	      target.velocityChanged = true;
+	      
 	      return true;
 	   }
 

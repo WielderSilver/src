@@ -5,6 +5,7 @@ package com.wieldersilver.scmcraft.tools.weapons;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.wieldersilver.scmcraft.tools.ModItemTier;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -18,8 +19,10 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.TieredItem;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -66,23 +69,38 @@ public class GreatswordItem extends TieredItem {
 	    * the damage on the stack.
 	    */
 	   public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+		   
+		   ModItemTier temp = (ModItemTier) this.getTier();
+			boolean b = true;
+			if(temp.getSpecialFunctionHandler() != null)
+			{
+				b = temp.getSpecialFunctionHandler().hitEntity(stack, target, attacker);
+			}
+			
 	      stack.damageItem(1, attacker, (p_220045_0_) -> {
 	         p_220045_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 	      });
-	      return true;
+	      return b && true;
 	   }
 
 	   /**
 	    * Called when a Block is destroyed using this Item. Return true to trigger the "Use Item" statistic.
 	    */
 	   public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving) {
-	      if (state.getBlockHardness(worldIn, pos) != 0.0F) {
+		   ModItemTier temp = (ModItemTier) this.getTier();
+			boolean b = true;
+			if(temp.getSpecialFunctionHandler() != null)
+			{
+				b = temp.getSpecialFunctionHandler().onBlockDestroyed(stack, worldIn, state, pos, entityLiving);
+			}
+		   
+		   if (state.getBlockHardness(worldIn, pos) != 0.0F) {
 	         stack.damageItem(2, entityLiving, (p_220044_0_) -> {
 	            p_220044_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 	         });
 	      }
 
-	      return true;
+	      return b && true;
 	   }
 
 	   /**
@@ -105,7 +123,16 @@ public class GreatswordItem extends TieredItem {
 	      return multimap;
 	   }
 	
-	
+	   public ActionResultType onItemUse(ItemUseContext context)
+		{
+			ModItemTier temp = (ModItemTier) this.getTier();
+			if(temp.getSpecialFunctionHandler() != null)
+			{
+				return temp.getSpecialFunctionHandler().onItemUse(context);
+			}
+			
+			return super.onItemUse(context);
+		}
 
 	
 
