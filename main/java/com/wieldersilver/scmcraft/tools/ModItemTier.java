@@ -3,8 +3,12 @@ package com.wieldersilver.scmcraft.tools;
 import java.util.function.Supplier;
 
 import com.wieldersilver.scmcraft.init.ItemInit;
+import com.wieldersilver.scmcraft.tools.toolmaterials.AmethystToolMaterial;
+import com.wieldersilver.scmcraft.tools.toolmaterials.EmeraldToolMaterial;
 import com.wieldersilver.scmcraft.tools.toolmaterials.RubyToolMaterial;
 import com.wieldersilver.scmcraft.tools.toolmaterials.SCMToolMaterial;
+import com.wieldersilver.scmcraft.tools.toolmaterials.SapphireToolMaterial;
+import com.wieldersilver.scmcraft.tools.toolmaterials.TopazToolMaterial;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Items;
@@ -19,19 +23,19 @@ public enum ModItemTier implements IItemTier
 	}, new RubyToolMaterial()),
 	SAPPHIRE(2, 175, 6.0F, 2.0F, 14, () -> {
 		return Ingredient.fromItems(ItemInit.sapphire);
-	}, null),
+	}, new SapphireToolMaterial()),
 	AMETHYST(2, 175, 6.0F, 2.0F, 14, () -> {
 		return Ingredient.fromItems(ItemInit.amethyst);
-	}, null),
+	}, new AmethystToolMaterial()),
 	TOPAZ(2, 175, 6.0F, 2.0F, 14, () -> {
 		return Ingredient.fromItems(ItemInit.topaz);
-	}, null),
+	}, new TopazToolMaterial()),
 	MYTHRIL(0, 32, 10.0F, 0.0F, 22, () -> {
 		return Ingredient.fromItems(ItemInit.mythril_shard);
 	}, null),
 	EMERALD(2, 175, 6.0F, 2.0F, 14, () -> {
 		return Ingredient.fromItems(Items.EMERALD);
-	}, null),
+	}, new EmeraldToolMaterial()),
 	;
 	
 	private final int harvestLevel;
