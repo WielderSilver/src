@@ -32,8 +32,8 @@ import net.minecraft.world.World;
  */
 public class RapierItem extends TieredItem {
 	
-	private static final float ATTACK_DAMAGE = -2.5f;
-	private static final float ATTACK_SPEED = 0.0f;
+	private static final float ATTACK_DAMAGE = 2.5f;
+	private static final float ATTACK_SPEED = -2.2f;
 	
 	private final float attackDamage;
 	
