@@ -20,7 +20,7 @@ issueTrackerURL="http://my.issue.tracker/" #optional
 modId="scmcraft" #mandatory
 
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
-version="1.0" #mandatory
+version="1.15.1-1.0.0" #mandatory
 
  # A display name for the mod
 displayName="SCM Craft" #mandatory
@@ -29,22 +29,31 @@ displayName="SCM Craft" #mandatory
 updateJSONURL="http://myurl.me/" #optional
 
 # A URL for the "homepage" for this mod, displayed in the mod UI
-displayURL="http://example.com/" #optional
+displayURL="https://www.youtube.com/channel/UCmJiW4asG2sptS_jv_l1ncQ?view_as=subscriber/" #optional
 
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="examplemod.png" #optional
+logoFile="logo.png" #optional
 
 # A text field displayed in the mod UI
-credits="Special thanks to TurtyWurty's 1.15.1 modding tutorial, Technovision for his 1.12.2 modding tutorial, and HappyFrozenFire for his help and support" #optional
+credits="Special thanks to TurtyWurty's 1.15.1 modding tutorial, Technovision for his 1.12.2 modding tutorial and 1.15/16 modding tutorial, and Mr. Pineapple for his 1.15 modding tutorial series. 
+Here are their respective youtube channels:
+
+TurtyWurty: https://www.youtube.com/channel/UCicAXLV4w2X6bn2EuM4To4w
+Technovision: https://www.youtube.com/channel/UC3n-lKS-MYlunVtErgzSFZg
+Mr. Pineapple: https://www.youtube.com/channel/UCT_Og2B8WwDPwnXr0FxMIeg
+
+A very special thanks to my friend HappyFrozenFire for his help and support. From mentor-ship to partnership, this mod would not be possible without you." #optional
 
 # A text field displayed in the mod UI
-authors="WielderSilver" #optional
+authors="WielderSilver, HappyFrozenFire" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 
 description='''
 	Greetings!
-	This is a mod designed to add some flare and adventure to Minecraft, with inspiration coming from final fantasy, monster hunter, and many more places
+	This is a mod designed to add some flare and adventure to Minecraft, with inspiration coming from other works such as Minecraft Dungeons, Final Fantasy, Monster Hunter and Kingdom Hearts.
+	
+	This is Update 1: The Gems Update. This version adds new gems, weapons, blocks, and tools. Textures and logos are not final.
 	'''
 
 
