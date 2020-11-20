@@ -30,7 +30,7 @@ import net.minecraft.world.World;
  * @author Silverbeam
  *
  */
-public class DaggerItem extends TieredItem {
+public class DaggerItem extends TieredItem implements IExtendedReach {
 	
 	private static final float ATTACK_DAMAGE = 6.5f;
 	private static final float ATTACK_SPEED = -3f;
@@ -133,6 +133,12 @@ public class DaggerItem extends TieredItem {
 			
 			return super.onItemUse(context);
 		}
+
+
+	@Override
+	public float getReach() {
+		return 20;
+	}
 
 	
 
