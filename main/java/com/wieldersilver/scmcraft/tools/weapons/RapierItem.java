@@ -30,7 +30,7 @@ import net.minecraft.world.World;
  * @author Silverbeam
  *
  */
-public class RapierItem extends TieredItem {
+public class RapierItem extends TieredItem implements IExtendedReach {
 	
 	private static final float ATTACK_DAMAGE = 2.5f;
 	private static final float ATTACK_SPEED = -2.2f;
@@ -133,6 +133,13 @@ public class RapierItem extends TieredItem {
 			
 			return super.onItemUse(context);
 		}
+
+
+	/*@Override
+	public float getReach() {
+		// TODO Auto-generated method stub
+		return 20;
+	}*/
 	
 	
 

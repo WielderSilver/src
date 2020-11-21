@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.wieldersilver.scmcraft.init.BlockInit;
 import com.wieldersilver.scmcraft.init.ItemInit;
+import com.wieldersilver.scmcraft.net.SCMPacketHandler;
 import com.wieldersilver.scmcraft.worldgen.OreGeneration;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -21,7 +22,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class scmcraft
 {
 	final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "scmcraft";
     
     public static scmcraft instance;
@@ -38,6 +39,8 @@ public class scmcraft
         MinecraftForge.EVENT_BUS.register(this);
         
         LOGGER.debug("Woot woot, loading stuff up!");
+        
+        new SCMPacketHandler();
     }
 
     private void setup(final FMLCommonSetupEvent event)
