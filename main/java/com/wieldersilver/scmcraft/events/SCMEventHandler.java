@@ -49,7 +49,7 @@ public class SCMEventHandler {
 			{
 				float reach = ((IExtendedReach)item).getReach();
 				
-				LivingEntity target = Utils.getTarget(reach);
+				LivingEntity target = Utils.getExtendedRangeTarget(reach);
 				if(target != null && target.hurtResistantTime == 0 && target != player)
 				{
 					SCMPacketHandler.INSTANCE.sendToServer(new MessageExtendedReachAttack(target.getEntityId()));

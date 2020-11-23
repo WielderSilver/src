@@ -133,16 +133,4 @@ public class RapierItem extends TieredItem {
 			
 			return super.onItemUse(context);
 		}
-
-
-	/*@Override
-	public float getReach() {
-		// TODO Auto-generated method stub
-		return 20;
-	}*/
-	
-	
-
-	
-
 }
