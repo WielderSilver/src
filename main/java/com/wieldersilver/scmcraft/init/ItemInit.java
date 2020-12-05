@@ -9,6 +9,7 @@ import com.wieldersilver.scmcraft.tools.SCMPickaxeItem;
 import com.wieldersilver.scmcraft.tools.SCMShovelItem;
 import com.wieldersilver.scmcraft.tools.weapons.DaggerItem;
 import com.wieldersilver.scmcraft.tools.weapons.GreatswordItem;
+import com.wieldersilver.scmcraft.tools.weapons.LanceItem;
 import com.wieldersilver.scmcraft.tools.weapons.RapierItem;
 import com.wieldersilver.scmcraft.tools.weapons.SCMSwordItem;
 import com.wieldersilver.scmcraft.tools.weapons.StoneGreatswordItem;
@@ -48,7 +49,9 @@ public class ItemInit
 	public static final Item ruby_greatsword = new GreatswordItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_greatsword");
 	public static final Item ruby_rapier = new RapierItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_rapier");
 	public static final Item ruby_dagger = new DaggerItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_dagger");
+	public static final Item ruby_lance = new LanceItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_lance");
 
+	
 	//Armor
 	public static final Item ruby_helmet = new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_helmet");
 	public static final Item ruby_chestplate = new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_chestplate");
@@ -64,7 +67,8 @@ public class ItemInit
 	public static final Item topaz_greatsword = new GreatswordItem(ModItemTier.TOPAZ, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_greatsword");
 	public static final Item topaz_rapier = new RapierItem(ModItemTier.TOPAZ, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_rapier");
 	public static final Item topaz_dagger = new DaggerItem(ModItemTier.TOPAZ, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_dagger");
-	
+	public static final Item topaz_lance = new LanceItem(ModItemTier.TOPAZ, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_lance");
+
 	//Armor
 	public static final Item topaz_helmet = new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_helmet");
 	public static final Item topaz_chestplate = new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_chestplate");
@@ -80,7 +84,8 @@ public class ItemInit
 	public static final Item amethyst_greatsword = new GreatswordItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_greatsword");
 	public static final Item amethyst_rapier = new RapierItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_rapier");
 	public static final Item amethyst_dagger = new DaggerItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_dagger");
-	
+	public static final Item amethyst_lance = new LanceItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_lance");
+
 	//Armor
 	public static final Item amethyst_helmet = new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_helmet");
 	public static final Item amethyst_chestplate = new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_chestplate");
@@ -96,6 +101,7 @@ public class ItemInit
 	public static final Item sapphire_greatsword = new GreatswordItem(ModItemTier.SAPPHIRE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_greatsword");
 	public static final Item sapphire_rapier = new RapierItem(ModItemTier.SAPPHIRE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_rapier");
 	public static final Item sapphire_dagger = new DaggerItem(ModItemTier.SAPPHIRE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_dagger");
+	public static final Item sapphire_lance = new LanceItem(ModItemTier.SAPPHIRE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_lance");
 
 	//Armor
 	public static final Item sapphire_helmet = new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_helmet");
@@ -112,6 +118,7 @@ public class ItemInit
 	public static final Item emerald_greatsword = new GreatswordItem(ModItemTier.EMERALD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_greatsword");
 	public static final Item emerald_rapier = new RapierItem(ModItemTier.EMERALD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_rapier");
 	public static final Item emerald_dagger = new DaggerItem(ModItemTier.EMERALD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_dagger");
+	public static final Item emerald_lance = new LanceItem(ModItemTier.EMERALD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_lance");
 
 	//Armor
 	public static final Item emerald_helmet = new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_helmet");
@@ -128,7 +135,8 @@ public class ItemInit
 	public static final Item mythril_greatsword = new GreatswordItem(ModItemTier.MYTHRIL, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_greatsword");
 	public static final Item mythril_rapier = new RapierItem(ModItemTier.MYTHRIL, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_rapier");
 	public static final Item mythril_dagger = new DaggerItem(ModItemTier.MYTHRIL, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_dagger");
-	
+	public static final Item mythril_lance = new LanceItem(ModItemTier.MYTHRIL, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_lance");
+
 	//Armor
 	public static final Item mythril_helmet = new ArmorItem(ModArmorMaterial.MYTHRIL, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_helmet");
 	public static final Item mythril_chestplate = new ArmorItem(ModArmorMaterial.MYTHRIL, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_chestplate");
@@ -170,6 +178,12 @@ public class ItemInit
 	public static final Item iron_dagger = new DaggerItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("iron_dagger");
 	public static final Item stone_dagger = new DaggerItem(ItemTier.STONE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("stone_dagger");
 	public static final Item wooden_dagger = new DaggerItem(ItemTier.WOOD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("wood_dagger");
+	
+	public static final Item gold_lance = new LanceItem(ItemTier.GOLD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("gold_lance");
+	public static final Item diamond_lance = new LanceItem(ItemTier.DIAMOND, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("diamond_lance");
+	public static final Item iron_lance = new LanceItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("iron_lance");
+	public static final Item stone_lance = new LanceItem(ItemTier.STONE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("stone_lance");
+	public static final Item wooden_lance = new LanceItem(ItemTier.WOOD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("wood_lance");
 
 
 	
@@ -303,5 +317,17 @@ public class ItemInit
 		event.getRegistry().register(iron_dagger);
 		event.getRegistry().register(gold_dagger);
 		event.getRegistry().register(diamond_dagger);
+		
+		event.getRegistry().register(ruby_lance);
+		event.getRegistry().register(sapphire_lance);
+		event.getRegistry().register(amethyst_lance);
+		event.getRegistry().register(topaz_lance);
+		event.getRegistry().register(emerald_lance);
+		event.getRegistry().register(mythril_lance);
+		event.getRegistry().register(wooden_lance);
+		event.getRegistry().register(stone_lance);
+		event.getRegistry().register(iron_lance);
+		event.getRegistry().register(gold_lance);
+		event.getRegistry().register(diamond_lance);
 	}
 }
