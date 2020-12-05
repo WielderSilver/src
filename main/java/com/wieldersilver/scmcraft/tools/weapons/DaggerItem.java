@@ -137,7 +137,7 @@ public class DaggerItem extends TieredItem implements IExtendedReach {
 
 	@Override
 	public float getReach() {
-		return 20;
+		return 2;
 	}
 
 	
