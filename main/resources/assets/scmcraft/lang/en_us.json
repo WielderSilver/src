@@ -120,6 +120,30 @@
 	"item.scmcraft.lady_luck": "Lady Luck",
 	"item.scmcraft.lady_luck_hilt": "Lady Luck Hilt",
 	"item.scmcraft.lady_luck_blade": "Lady Luck Blade",
-	"item.scmcraft.lady_luck_point": "Lady Luck Point"
+	"item.scmcraft.lady_luck_point": "Lady Luck Point",
+	
+	"item.scmcraft.ruby_dagger": "Ruby Dagger",
+	"item.scmcraft.sapphire_dagger": "Sapphire Dagger",
+	"item.scmcraft.topaz_dagger": "Topaz Dagger",
+	"item.scmcraft.amethyst_dagger": "Amethyst Dagger",
+	"item.scmcraft.emerald_dagger": "Emerald Dagger",
+	"item.scmcraft.iron_dagger": "Iron Dagger",
+	"item.scmcraft.mythril_dagger": "Mythril Dagger",
+	"item.scmcraft.gold_dagger": "Gold Dagger",
+	"item.scmcraft.diamond_dagger": "Diamond Dagger",
+	"item.scmcraft.wood_dagger": "Wooden Dagger",
+	"item.scmcraft.stone_dagger": "Stone Dagger",
+
+	"item.scmcraft.ruby_lance": "Ruby Lance",
+	"item.scmcraft.sapphire_lance": "Sapphire Lance",
+	"item.scmcraft.topaz_lance": "Topaz Lance",
+	"item.scmcraft.amethyst_lance": "Amethyst Lance",
+	"item.scmcraft.emerald_lance": "Emerald Lance",
+	"item.scmcraft.iron_lance": "Iron Lance",
+	"item.scmcraft.mythril_lance": "Mythril Lance",
+	"item.scmcraft.gold_lance": "Gold Lance",
+	"item.scmcraft.diamond_lance": "Diamond Lance",
+	"item.scmcraft.wood_lance": "Wooden Lance",
+	"item.scmcraft.stone_lance": "Stone Lance"
 	
 }

@@ -26,6 +26,7 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+
 /**
  * @author Silverbeam
  *
@@ -81,6 +82,7 @@ public class DaggerItem extends TieredItem implements IExtendedReach {
 	         p_220045_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 	      });
 	      return b && true;
+
 	   }
 
 	   /**

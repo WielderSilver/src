@@ -134,6 +134,6 @@ public class LanceItem extends TieredItem {
 			return super.onItemUse(context);
 		}
 	   public float getReach() {
-			return 4;
+			return 6;
 		}
 }
