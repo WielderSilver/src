@@ -32,6 +32,8 @@ public class BlockInit
 	public static final Block sapphire_ore = new SCMOreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0f, 6.0f).sound(SoundType.STONE).harvestLevel(2).harvestTool(ToolType.PICKAXE)).setRegistryName("sapphire_ore");
 	public static final Block mythril_ore = new SCMOreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0f, 6.0f).sound(SoundType.STONE).harvestLevel(2).harvestTool(ToolType.PICKAXE)).setRegistryName("mythril_ore");
 	
+	public static final Block spell_station = new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(5.0f, 1200.0f).sound(SoundType.WOOD).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName("spell_station");
+
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) 
 	{
@@ -46,7 +48,8 @@ public class BlockInit
 		event.getRegistry().register(topaz_ore);
 		event.getRegistry().register(sapphire_ore);
 		event.getRegistry().register(mythril_ore);
-
+		
+		event.getRegistry().register(spell_station);
 	}
 	
 	@SubscribeEvent
@@ -64,5 +67,6 @@ public class BlockInit
 		event.getRegistry().register(new BlockItem(amethyst_ore, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("amethyst_ore"));
 		event.getRegistry().register(new BlockItem(mythril_ore, new Item.Properties().group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("mythril_ore"));
 
+		event.getRegistry().register(new BlockItem(spell_station, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("spell_station"));
 	}
 }

@@ -10,6 +10,7 @@ import com.wieldersilver.scmcraft.tools.SCMShovelItem;
 import com.wieldersilver.scmcraft.tools.weapons.DaggerItem;
 import com.wieldersilver.scmcraft.tools.weapons.GreatswordItem;
 import com.wieldersilver.scmcraft.tools.weapons.LanceItem;
+import com.wieldersilver.scmcraft.tools.weapons.NunchuckItem;
 import com.wieldersilver.scmcraft.tools.weapons.RapierItem;
 import com.wieldersilver.scmcraft.tools.weapons.SCMSwordItem;
 import com.wieldersilver.scmcraft.tools.weapons.StoneGreatswordItem;
@@ -39,6 +40,9 @@ public class ItemInit
 	public static final Item sapphire = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("sapphire");
 	public static final Item mythril_shard = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("mythril_shard");
 	public static final Item pole = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("pole");
+	public static final Item scrawl = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("scrawl");
+	public static final Item tome = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("tome");
+
 
 	//Tools
 	public static final Item ruby_sword = new SCMSwordItem(ModItemTier.RUBY, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_sword");
@@ -50,6 +54,7 @@ public class ItemInit
 	public static final Item ruby_rapier = new RapierItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_rapier");
 	public static final Item ruby_dagger = new DaggerItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_dagger");
 	public static final Item ruby_lance = new LanceItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_lance");
+	public static final Item ruby_nunchuck = new NunchuckItem(ModItemTier.RUBY, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_nunchuck");
 
 	
 	//Armor
@@ -68,6 +73,7 @@ public class ItemInit
 	public static final Item topaz_rapier = new RapierItem(ModItemTier.TOPAZ, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_rapier");
 	public static final Item topaz_dagger = new DaggerItem(ModItemTier.TOPAZ, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_dagger");
 	public static final Item topaz_lance = new LanceItem(ModItemTier.TOPAZ, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_lance");
+	public static final Item topaz_nunchuck = new NunchuckItem(ModItemTier.EMERALD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_nunchuck");
 
 	//Armor
 	public static final Item topaz_helmet = new ArmorItem(ModArmorMaterial.TOPAZ, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_helmet");
@@ -85,6 +91,8 @@ public class ItemInit
 	public static final Item amethyst_rapier = new RapierItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_rapier");
 	public static final Item amethyst_dagger = new DaggerItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_dagger");
 	public static final Item amethyst_lance = new LanceItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_lance");
+	public static final Item amethyst_nunchuck = new NunchuckItem(ModItemTier.AMETHYST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_nunchuck");
+
 
 	//Armor
 	public static final Item amethyst_helmet = new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("amethyst_helmet");
@@ -102,6 +110,7 @@ public class ItemInit
 	public static final Item sapphire_rapier = new RapierItem(ModItemTier.SAPPHIRE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_rapier");
 	public static final Item sapphire_dagger = new DaggerItem(ModItemTier.SAPPHIRE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_dagger");
 	public static final Item sapphire_lance = new LanceItem(ModItemTier.SAPPHIRE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_lance");
+	public static final Item sapphire_nunchuck = new NunchuckItem(ModItemTier.SAPPHIRE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_nunchuck");
 
 	//Armor
 	public static final Item sapphire_helmet = new ArmorItem(ModArmorMaterial.SAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("sapphire_helmet");
@@ -119,6 +128,7 @@ public class ItemInit
 	public static final Item emerald_rapier = new RapierItem(ModItemTier.EMERALD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_rapier");
 	public static final Item emerald_dagger = new DaggerItem(ModItemTier.EMERALD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_dagger");
 	public static final Item emerald_lance = new LanceItem(ModItemTier.EMERALD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_lance");
+	public static final Item emerald_nunchuck = new NunchuckItem(ModItemTier.EMERALD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_nunchuck");
 
 	//Armor
 	public static final Item emerald_helmet = new ArmorItem(ModArmorMaterial.EMERALD, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("emerald_helmet");
@@ -136,6 +146,7 @@ public class ItemInit
 	public static final Item mythril_rapier = new RapierItem(ModItemTier.MYTHRIL, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_rapier");
 	public static final Item mythril_dagger = new DaggerItem(ModItemTier.MYTHRIL, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_dagger");
 	public static final Item mythril_lance = new LanceItem(ModItemTier.MYTHRIL, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_lance");
+	public static final Item mythril_nunchuck = new NunchuckItem(ModItemTier.MYTHRIL, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_nunchuck");
 
 	//Armor
 	public static final Item mythril_helmet = new ArmorItem(ModArmorMaterial.MYTHRIL, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("mythril_helmet");
@@ -184,6 +195,12 @@ public class ItemInit
 	public static final Item iron_lance = new LanceItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("iron_lance");
 	public static final Item stone_lance = new LanceItem(ItemTier.STONE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("stone_lance");
 	public static final Item wooden_lance = new LanceItem(ItemTier.WOOD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("wood_lance");
+	
+	public static final Item gold_nunchuck = new NunchuckItem(ItemTier.GOLD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("gold_nunchuck");
+	public static final Item diamond_nunchuck = new NunchuckItem(ItemTier.DIAMOND, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("diamond_nunchuck");
+	public static final Item iron_nunchuck = new NunchuckItem(ItemTier.IRON, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("iron_nunchuck");
+	public static final Item stone_nunchuck = new NunchuckItem(ItemTier.STONE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("stone_nunchuck");
+	public static final Item wooden_nunchuck = new NunchuckItem(ItemTier.WOOD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("wood_nunchuck");
 
 
 	
@@ -197,6 +214,8 @@ public class ItemInit
 		event.getRegistry().register(amethyst);
 		event.getRegistry().register(mythril_shard);
 		event.getRegistry().register(pole);
+		event.getRegistry().register(tome);
+		event.getRegistry().register(scrawl);
 
 		event.getRegistry().register(ruby_sword);
 		event.getRegistry().register(sapphire_sword);
@@ -329,5 +348,17 @@ public class ItemInit
 		event.getRegistry().register(iron_lance);
 		event.getRegistry().register(gold_lance);
 		event.getRegistry().register(diamond_lance);
+		
+		event.getRegistry().register(ruby_nunchuck);
+		event.getRegistry().register(sapphire_nunchuck);
+		event.getRegistry().register(amethyst_nunchuck);
+		event.getRegistry().register(topaz_nunchuck);
+		event.getRegistry().register(emerald_nunchuck);
+		event.getRegistry().register(mythril_nunchuck);
+		event.getRegistry().register(wooden_nunchuck);
+		event.getRegistry().register(stone_nunchuck);
+		event.getRegistry().register(iron_nunchuck);
+		event.getRegistry().register(gold_nunchuck);
+		event.getRegistry().register(diamond_nunchuck);
 	}
 }
