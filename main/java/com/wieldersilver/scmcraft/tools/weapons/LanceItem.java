@@ -30,7 +30,7 @@ import net.minecraft.world.World;
  * @author Silverbeam
  *
  */
-public class LanceItem extends TieredItem {
+public class LanceItem extends TieredItem implements IExtendedReach {
 	
 	private static final float ATTACK_DAMAGE = 2.5f;
 	private static final float ATTACK_SPEED = -2.2f;
@@ -70,9 +70,9 @@ public class LanceItem extends TieredItem {
 	    */
 	   public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 		   
-		   ModItemTier temp = (ModItemTier) this.getTier();
+		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
 			boolean b = true;
-			if(temp.getSpecialFunctionHandler() != null)
+			if(temp != null && temp.getSpecialFunctionHandler() != null)
 			{
 				b = temp.getSpecialFunctionHandler().hitEntity(stack, target, attacker);
 			}
@@ -81,15 +81,16 @@ public class LanceItem extends TieredItem {
 	         p_220045_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 	      });
 	      return b && true;
+
 	   }
 
 	   /**
 	    * Called when a Block is destroyed using this Item. Return true to trigger the "Use Item" statistic.
 	    */
 	   public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving) {
-		   ModItemTier temp = (ModItemTier) this.getTier();
+		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
 			boolean b = true;
-			if(temp.getSpecialFunctionHandler() != null)
+			if(temp != null && temp.getSpecialFunctionHandler() != null)
 			{
 				b = temp.getSpecialFunctionHandler().onBlockDestroyed(stack, worldIn, state, pos, entityLiving);
 			}
@@ -125,15 +126,17 @@ public class LanceItem extends TieredItem {
 	   
 	   public ActionResultType onItemUse(ItemUseContext context)
 		{
-			ModItemTier temp = (ModItemTier) this.getTier();
-			if(temp.getSpecialFunctionHandler() != null)
+		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
+			if(temp != null && temp.getSpecialFunctionHandler() != null)
 			{
 				return temp.getSpecialFunctionHandler().onItemUse(context);
 			}
 			
 			return super.onItemUse(context);
 		}
+	   
+	   
 	   public float getReach() {
-			return 6;
+			return 6f;
 		}
 }

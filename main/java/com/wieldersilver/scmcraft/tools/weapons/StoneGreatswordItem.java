@@ -5,6 +5,7 @@ package com.wieldersilver.scmcraft.tools.weapons;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particles.ParticleTypes;
@@ -30,6 +31,9 @@ public class StoneGreatswordItem extends GreatswordItem {
 	{
 		
 		Minecraft.getInstance().particles.addParticleEmitter(target, ParticleTypes.FLAME);
+		stack.damageItem(1, attacker, (p_220045_0_) -> {
+	         p_220045_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+	      });
 		
 		return false;
 	}

@@ -21,6 +21,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.TieredItem;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
@@ -71,12 +73,14 @@ public class DaggerItem extends TieredItem implements IExtendedReach {
 	    */
 	   public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 		   
-		   ModItemTier temp = (ModItemTier) this.getTier();
+		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier) temp2; }
 			boolean b = true;
-			if(temp.getSpecialFunctionHandler() != null)
+			if(temp != null && temp.getSpecialFunctionHandler() != null)
 			{
 				b = temp.getSpecialFunctionHandler().hitEntity(stack, target, attacker);
 			}
+			
+			attacker.addPotionEffect(new EffectInstance(Effects.SPEED, 40, 0));
 			
 	      stack.damageItem(1, attacker, (p_220045_0_) -> {
 	         p_220045_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
@@ -89,9 +93,9 @@ public class DaggerItem extends TieredItem implements IExtendedReach {
 	    * Called when a Block is destroyed using this Item. Return true to trigger the "Use Item" statistic.
 	    */
 	   public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving) {
-		   ModItemTier temp = (ModItemTier) this.getTier();
-			boolean b = true;
-			if(temp.getSpecialFunctionHandler() != null)
+		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
+		   boolean b = true;
+			if(temp != null && temp.getSpecialFunctionHandler() != null)
 			{
 				b = temp.getSpecialFunctionHandler().onBlockDestroyed(stack, worldIn, state, pos, entityLiving);
 			}
@@ -127,8 +131,8 @@ public class DaggerItem extends TieredItem implements IExtendedReach {
 	
 	   public ActionResultType onItemUse(ItemUseContext context)
 		{
-			ModItemTier temp = (ModItemTier) this.getTier();
-			if(temp.getSpecialFunctionHandler() != null)
+		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
+			if(temp != null && temp.getSpecialFunctionHandler() != null)
 			{
 				return temp.getSpecialFunctionHandler().onItemUse(context);
 			}

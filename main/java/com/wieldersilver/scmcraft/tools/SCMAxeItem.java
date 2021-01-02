@@ -26,9 +26,9 @@ public class SCMAxeItem extends AxeItem {
 	
 	public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving)
 	{
-		ModItemTier temp = (ModItemTier) this.getTier();
+		ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
 		boolean b = true;
-		if(temp.getSpecialFunctionHandler() != null)
+		if(temp != null && temp.getSpecialFunctionHandler() != null)
 		{
 			b = temp.getSpecialFunctionHandler().onBlockDestroyed(stack, worldIn, state, pos, entityLiving);
 		}
@@ -39,8 +39,8 @@ public class SCMAxeItem extends AxeItem {
 	
 	public ActionResultType onItemUse(ItemUseContext context)
 	{
-		ModItemTier temp = (ModItemTier) this.getTier();
-		if(temp.getSpecialFunctionHandler() != null)
+		ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
+		if(temp != null && temp.getSpecialFunctionHandler() != null)
 		{
 			return temp.getSpecialFunctionHandler().onItemUse(context);
 		}
@@ -50,9 +50,9 @@ public class SCMAxeItem extends AxeItem {
 	
 	public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker)
 	{
-		ModItemTier temp = (ModItemTier) this.getTier();
+		ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
 		boolean b = true;
-		if(temp.getSpecialFunctionHandler() != null)
+		if(temp != null && temp.getSpecialFunctionHandler() != null)
 		{
 			b = temp.getSpecialFunctionHandler().hitEntity(stack, target, attacker);
 		}
