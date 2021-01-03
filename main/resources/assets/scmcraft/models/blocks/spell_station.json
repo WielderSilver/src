@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "scmcraft:blocks/spell_station"
+    }
+}

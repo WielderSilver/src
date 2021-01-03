@@ -5,6 +5,8 @@
 	"item.scmcraft.amethyst": "Amethyst",
 	"item.scmcraft.mythril_shard": "Mythril Shard",
 	"item.scmcraft.pole": "Pole",
+	"item.scmcraft.tome": "Tome",
+	"item.scmcraft.scrawl": "Scrawl",
 	
 	"block.scmcraft.ruby_block": "Ruby Block",
 	"block.scmcraft.topaz_block": "Topaz Block",
@@ -16,6 +18,8 @@
 	"block.scmcraft.amethyst_ore": "Amethyst Ore",
 	"block.scmcraft.sapphire_ore": "Sapphire Ore",
 	"block.scmcraft.mythril_ore": "Mythril Ore",
+		"block.scmcraft.spell_station": "Spell Station",
+	
 	
 	"item.scmcraft.ruby_sword": "Ruby Sword",
 	"item.scmcraft.ruby_pickaxe": "Ruby Pickaxe",
@@ -144,6 +148,18 @@
 	"item.scmcraft.gold_lance": "Gold Lance",
 	"item.scmcraft.diamond_lance": "Diamond Lance",
 	"item.scmcraft.wood_lance": "Wooden Lance",
-	"item.scmcraft.stone_lance": "Stone Lance"
+	"item.scmcraft.stone_lance": "Stone Lance",
+	
+	"item.scmcraft.ruby_nunchucks": "Ruby Nunchucks",
+	"item.scmcraft.sapphire_nunchucks": "Sapphire Nunchucks",
+	"item.scmcraft.topaz_nunchucks": "Topaz Nunchucks",
+	"item.scmcraft.amethyst_nunchucks": "Amethyst Nunchucks",
+	"item.scmcraft.emerald_nunchucks": "Emerald Nunchucks",
+	"item.scmcraft.iron_nunchucks": "Iron Nunchucks",
+	"item.scmcraft.mythril_nunchucks": "Mythril Nunchucks",
+	"item.scmcraft.gold_nunchucks": "Gold Nunchucks",
+	"item.scmcraft.diamond_nunchucks": "Diamond Nunchucks",
+	"item.scmcraft.wood_nunchucks": "Wooden Nunchucks",
+	"item.scmcraft.stone_nunchucks": "Stone Nunchucks"
 	
 }
