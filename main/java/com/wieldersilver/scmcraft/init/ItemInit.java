@@ -2,6 +2,7 @@ package com.wieldersilver.scmcraft.init;
 
 import com.wieldersilver.scmcraft.scmcraft;
 import com.wieldersilver.scmcraft.armor.ModArmorMaterial;
+import com.wieldersilver.scmcraft.armor.RubyArmorItem;
 import com.wieldersilver.scmcraft.tools.ModItemTier;
 import com.wieldersilver.scmcraft.tools.SCMAxeItem;
 import com.wieldersilver.scmcraft.tools.SCMHoeItem;
@@ -58,10 +59,10 @@ public class ItemInit
 
 	
 	//Armor
-	public static final Item ruby_helmet = new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_helmet");
-	public static final Item ruby_chestplate = new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_chestplate");
-	public static final Item ruby_leggings = new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_leggings");
-	public static final Item ruby_boots = new ArmorItem(ModArmorMaterial.RUBY, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_boots");
+	public static final Item ruby_helmet = new RubyArmorItem(EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_helmet");
+	public static final Item ruby_chestplate = new RubyArmorItem(EquipmentSlotType.CHEST, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_chestplate");
+	public static final Item ruby_leggings = new RubyArmorItem(EquipmentSlotType.LEGS, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_leggings");
+	public static final Item ruby_boots = new RubyArmorItem(EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("ruby_boots");
 	
 	//Tools
 	public static final Item topaz_sword = new SCMSwordItem(ModItemTier.TOPAZ, 3, -2.4F, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("topaz_sword");

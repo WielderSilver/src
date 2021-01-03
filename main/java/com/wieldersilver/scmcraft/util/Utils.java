@@ -1,16 +1,10 @@
 package com.wieldersilver.scmcraft.util;
 
-import java.util.List;
-import java.util.function.Predicate;
-
 import javax.annotation.Nullable;
-
-import com.wieldersilver.scmcraft.scmcraft;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.item.ItemFrameEntity;
 import net.minecraft.entity.projectile.ProjectileHelper;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.EntityRayTraceResult;
