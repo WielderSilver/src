@@ -41,6 +41,7 @@ public class ItemInit
 	public static final Item sapphire = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("sapphire");
 	public static final Item mythril_shard = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("mythril_shard");
 	public static final Item pole = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("pole");
+	
 	public static final Item scrawl = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("scrawl");
 	public static final Item tome = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("tome");
 
