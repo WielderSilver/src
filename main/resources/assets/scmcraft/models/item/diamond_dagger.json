@@ -1,0 +1,21 @@
+
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "scmcraft:items/diamond_dagger"
+	},
+	"display": {"thirdperson_righthand":
+		{
+			"rotation": [ 0, 90, 50 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+		},
+		"thirdperson_lefthand":
+		{
+			"rotation": [ 0, -90, -50 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+		}
+    }
+}
+}
