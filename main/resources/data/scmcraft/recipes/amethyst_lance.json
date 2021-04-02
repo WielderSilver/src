@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     " AA",
+     " SA",
+     "S  "
+],
+"key": {
+    "A": {
+        "item": "scmcraft:amethyst"
+        },
+    "S": {
+         "item": "minecraft:stick"
+         }
+   },
+   "result": {"item": "scmcraft:amethyst_lance",
+   "count": 1
+   }
+}

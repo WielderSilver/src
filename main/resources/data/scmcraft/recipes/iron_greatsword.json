@@ -3,14 +3,14 @@
 "pattern": [
      "I",
      "I",
-     "P"
+     "S"
 ],
 "key": {
     "I": {
         "item": "minecraft:iron_block"
         },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:iron_greatsword",

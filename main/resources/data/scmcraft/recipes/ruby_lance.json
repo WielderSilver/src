@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     " RR",
+     " SR",
+     "S  "
+],
+"key": {
+    "R": {
+        "item": "scmcraft:ruby"
+        },
+    "S": {
+         "item": "minecraft:stick"
+         }
+   },
+   "result": {"item": "scmcraft:ruby_lance",
+   "count": 1
+   }
+}

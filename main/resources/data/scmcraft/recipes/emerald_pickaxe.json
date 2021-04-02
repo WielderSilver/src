@@ -2,15 +2,15 @@
 "type": "minecraft:crafting_shaped",
 "pattern": [
      "EEE",
-     " P ",
-     " P "
+     " S ",
+     " S "
 ],
 "key": {
     "E": {
         "item": "minecraft:emerald"
         },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:emerald_pickaxe",

@@ -3,14 +3,14 @@
 "pattern": [
      "M",
      "M",
-     "P"
+     "S"
 ],
 "key": {
     "M": {
         "item": "scmcraft:mythril_block"
         },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:mythril_greatsword",

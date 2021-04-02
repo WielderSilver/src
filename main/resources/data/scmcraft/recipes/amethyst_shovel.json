@@ -2,15 +2,15 @@
 "type": "minecraft:crafting_shaped",
 "pattern": [
      "A",
-     "P",
-     "P"
+     "S",
+     "S"
 ],
 "key": {
     "A": {
         "item": "scmcraft:amethyst"
         },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:amethyst_shovel",

@@ -3,7 +3,7 @@
 "pattern": [
      "L",
      "O",
-     "P"
+     "S"
 ],
 "key": {
     "L": {
@@ -12,8 +12,8 @@
     "O": {
         "item": "minecraft:oak_log"
         },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:wood_greatsword",

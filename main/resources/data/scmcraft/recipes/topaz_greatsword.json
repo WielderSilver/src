@@ -3,14 +3,14 @@
 "pattern": [
      "T",
      "T",
-     "P"
+     "S"
 ],
 "key": {
     "T": {
         "item": "scmcraft:topaz_block"
         },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:topaz_greatsword",

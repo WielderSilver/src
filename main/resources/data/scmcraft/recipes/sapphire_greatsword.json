@@ -10,7 +10,7 @@
         "item": "scmcraft:sapphire_block"
         },
     "P": {
-         "item": "scmcraft:pole"
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:sapphire_greatsword",

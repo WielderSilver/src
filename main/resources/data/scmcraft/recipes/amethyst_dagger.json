@@ -1,0 +1,18 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "A",
+     "S"
+],
+"key": {
+    "A": {
+        "item": "scmcraft:amethyst"
+        },
+    "S": {
+         "item": "minecraft:stick"
+         }
+   },
+   "result": {"item": "scmcraft:amethyst_dagger",
+   "count": 1
+   }
+}

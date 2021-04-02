@@ -10,7 +10,7 @@
         "item": "scmcraft:sapphire"
         },
     "P": {
-         "item": "scmcraft:pole"
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:sapphire_axe",

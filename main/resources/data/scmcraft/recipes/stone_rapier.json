@@ -2,18 +2,15 @@
 "type": "minecraft:crafting_shaped",
 "pattern": [
      "  C",
-     "CS ",
-     "PG "
+     " C ",
+     "S  "
 ],
 "key": {
     "C": {
         "item": "minecraft:cobblestone"
         },
-    "G": {
-        "item": "minecraft:gold_ingot"
-        },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:stone_rapier",

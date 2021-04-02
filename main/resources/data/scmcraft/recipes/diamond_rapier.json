@@ -3,14 +3,14 @@
 "pattern": [
      "  D",
      " D ",
-     "P  "
+     "S  "
 ],
 "key": {
     "D": {
         "item": "minecraft:diamond"
         },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:diamond_rapier",

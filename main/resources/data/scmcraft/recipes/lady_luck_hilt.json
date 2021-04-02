@@ -11,9 +11,6 @@
         },
     "A": {
         "item": "scmcraft:amethyst"
-        },
-    "R": {
-        "item": "scmcraft:ruby"
         }
    },
    "result": {"item": "scmcraft:lady_luck_hilt",

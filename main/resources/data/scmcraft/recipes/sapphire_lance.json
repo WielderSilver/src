@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     " SS",
+     " PS",
+     "P  "
+],
+"key": {
+    "S": {
+        "item": "scmcraft:sapphire"
+        },
+    "P": {
+         "item": "minecraft:stick"
+         }
+   },
+   "result": {"item": "scmcraft:sapphire_lance",
+   "count": 1
+   }
+}

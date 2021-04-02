@@ -3,14 +3,14 @@
 "pattern": [
      "A",
      "A",
-     "P"
+     "S"
 ],
 "key": {
     "A": {
         "item": "scmcraft:amethyst_block"
         },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:amethyst_greatsword",

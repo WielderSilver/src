@@ -3,14 +3,14 @@
 "pattern": [
      "F",
      "F",
-     "P"
+     "S"
 ],
 "key": {
     "F": {
         "item": "minecraft:furnace"
         },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:stone_greatsword",

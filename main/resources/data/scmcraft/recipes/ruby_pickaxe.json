@@ -2,15 +2,15 @@
 "type": "minecraft:crafting_shaped",
 "pattern": [
      "RRR",
-     " P ",
-     " P "
+     " S ",
+     " S "
 ],
 "key": {
     "R": {
         "item": "scmcraft:ruby"
         },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:ruby_pickaxe",

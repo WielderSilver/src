@@ -1,0 +1,18 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "W",
+     "S"
+],
+"key": {
+    "W": {
+        "item": "minecraft:oak_planks"
+        },
+    "S": {
+         "item": "minecraft:stick"
+         }
+   },
+   "result": {"item": "scmcraft:wood_dagger",
+   "count": 1
+   }
+}

@@ -1,0 +1,19 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     " WW",
+     " SW",
+     "S  "
+],
+"key": {
+    "W": {
+        "item": "minecraft:oak_planks"
+        },
+    "S": {
+         "item": "minecraft:stick"
+         }
+   },
+   "result": {"item": "scmcraft:wood_lance",
+   "count": 1
+   }
+}

@@ -3,16 +3,13 @@
 "pattern": [
      "  S",
      " S ",
-     "P  "
+     "S  "
 ],
 "key": {
     "S": {
         "item": "minecraft:stick"
+        }
         },
-    "P": {
-         "item": "scmcraft:pole"
-         }
-   },
    "result": {"item": "scmcraft:wood_rapier",
    "count": 1
    }

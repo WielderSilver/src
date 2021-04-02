@@ -3,14 +3,14 @@
 "pattern": [
      "  E",
      " E ",
-     "P  "
+     "S  "
 ],
 "key": {
     "E": {
         "item": "minecraft:emerald"
         },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:emerald_rapier",

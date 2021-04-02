@@ -1,0 +1,18 @@
+{
+"type": "minecraft:crafting_shaped",
+"pattern": [
+     "M",
+     "S"
+],
+"key": {
+    "M": {
+        "item": "scmcraft:mythril_shard"
+        },
+    "S": {
+         "item": "minecraft:stick"
+         }
+   },
+   "result": {"item": "scmcraft:mythril_dagger",
+   "count": 1
+   }
+}

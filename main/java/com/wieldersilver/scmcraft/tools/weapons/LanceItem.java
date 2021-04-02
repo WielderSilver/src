@@ -32,8 +32,8 @@ import net.minecraft.world.World;
  */
 public class LanceItem extends TieredItem implements IExtendedReach {
 	
-	private static final float ATTACK_DAMAGE = 2.5f;
-	private static final float ATTACK_SPEED = -2.2f;
+	private static final float ATTACK_DAMAGE = 4f;
+	private static final float ATTACK_SPEED = -2.7f;
 	
 	private final float attackDamage;
 	

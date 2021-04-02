@@ -3,14 +3,14 @@
 "pattern": [
      "  R",
      " R ",
-     "P  "
+     "S  "
 ],
 "key": {
     "R": {
         "item": "scmcraft:ruby"
         },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:ruby_rapier",

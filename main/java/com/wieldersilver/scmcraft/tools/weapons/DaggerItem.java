@@ -35,8 +35,8 @@ import net.minecraft.world.World;
  */
 public class DaggerItem extends TieredItem implements IExtendedReach {
 	
-	private static final float ATTACK_DAMAGE = 0.5f;
-	private static final float ATTACK_SPEED = -3f;
+	private static final float ATTACK_DAMAGE = 1f;
+	private static final float ATTACK_SPEED = -2f;
 	
 	private final float attackDamage;
 	

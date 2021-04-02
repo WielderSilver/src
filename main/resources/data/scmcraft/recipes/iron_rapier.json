@@ -3,14 +3,14 @@
 "pattern": [
      "  I",
      " I ",
-     "P  "
+     "S  "
 ],
 "key": {
     "I": {
         "item": "minecraft:iron_ingot"
         },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:iron_rapier",

@@ -2,15 +2,15 @@
 "type": "minecraft:crafting_shaped",
 "pattern": [
      " MM",
-     " P ",
-     " P "
+     " S ",
+     " S "
 ],
 "key": {
     "M": {
         "item": "scmcraft:mythril_shard"
         },
-    "P": {
-         "item": "scmcraft:pole"
+    "S": {
+         "item": "minecraft:stick"
          }
    },
    "result": {"item": "scmcraft:mythril_hoe",
