@@ -53,7 +53,11 @@ public class SCMEventHandler {
 				if(target != null && target.hurtResistantTime == 0 && target != player)
 				{
 					SCMPacketHandler.INSTANCE.sendToServer(new MessageExtendedReachAttack(target.getEntityId()));
-					item.hitEntity(player.getActiveItemStack(), target, player);
+					//item.hitEntity(player.getActiveItemStack(), target, player);
+					//target.hitByEntity(player);
+					player.attackTargetEntityWithCurrentItem(target);
+					
+					System.out.println("Extended Reach hit");
 				}
 				
 				event.setCanceled(true);

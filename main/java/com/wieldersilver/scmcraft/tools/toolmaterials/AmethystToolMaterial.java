@@ -17,7 +17,7 @@ import net.minecraft.world.World;
  */
 public class AmethystToolMaterial implements SCMToolMaterial {
 
-	/* (non-Javadoc)
+	/**
 	 * @see com.wieldersilver.scmcraft.tools.toolmaterials.SCMToolMaterial#onBlockDestroyed(net.minecraft.item.ItemStack, net.minecraft.world.World, net.minecraft.block.BlockState, net.minecraft.util.math.BlockPos, net.minecraft.entity.LivingEntity)
 	 */
 	@Override
@@ -27,7 +27,7 @@ public class AmethystToolMaterial implements SCMToolMaterial {
 		return true;
 	}
 
-	/* (non-Javadoc)
+	/**
 	 * @see com.wieldersilver.scmcraft.tools.toolmaterials.SCMToolMaterial#onItemUse(net.minecraft.item.ItemUseContext)
 	 */
 	@Override
@@ -36,7 +36,7 @@ public class AmethystToolMaterial implements SCMToolMaterial {
 		return ActionResultType.SUCCESS;
 	}
 
-	/* (non-Javadoc)
+	/**
 	 * @see com.wieldersilver.scmcraft.tools.toolmaterials.SCMToolMaterial#hitEntity(net.minecraft.item.ItemStack, net.minecraft.entity.LivingEntity, net.minecraft.entity.LivingEntity)
 	 */
 	@Override

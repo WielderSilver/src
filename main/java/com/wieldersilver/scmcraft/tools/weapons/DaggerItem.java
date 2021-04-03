@@ -53,10 +53,6 @@ public class DaggerItem extends TieredItem implements IExtendedReach {
 	      return attackDamage;
 	   }
 
-	   public boolean canPlayerBreakBlockWhileHolding(BlockState state, World worldIn, BlockPos pos, PlayerEntity player) {
-	      return !player.isCreative();
-	   }
-
 	   public float getDestroySpeed(ItemStack stack, BlockState state) {
 	      Block block = state.getBlock();
 	      if (block == Blocks.COBWEB) {
@@ -73,7 +69,7 @@ public class DaggerItem extends TieredItem implements IExtendedReach {
 	    */
 	   public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 		   
-		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier) temp2; }
+		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp2 instanceof ModItemTier) temp = (ModItemTier)temp2; }
 			boolean b = true;
 			if(temp != null && temp.getSpecialFunctionHandler() != null)
 			{
@@ -93,8 +89,8 @@ public class DaggerItem extends TieredItem implements IExtendedReach {
 	    * Called when a Block is destroyed using this Item. Return true to trigger the "Use Item" statistic.
 	    */
 	   public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving) {
-		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
-		   boolean b = true;
+		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp2 instanceof ModItemTier) temp = (ModItemTier)temp2; }
+			boolean b = true;
 			if(temp != null && temp.getSpecialFunctionHandler() != null)
 			{
 				b = temp.getSpecialFunctionHandler().onBlockDestroyed(stack, worldIn, state, pos, entityLiving);
@@ -131,7 +127,7 @@ public class DaggerItem extends TieredItem implements IExtendedReach {
 	
 	   public ActionResultType onItemUse(ItemUseContext context)
 		{
-		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
+		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp2 instanceof ModItemTier) temp = (ModItemTier)temp2; }
 			if(temp != null && temp.getSpecialFunctionHandler() != null)
 			{
 				return temp.getSpecialFunctionHandler().onItemUse(context);

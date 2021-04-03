@@ -19,7 +19,7 @@ public class SCMShovelItem extends ShovelItem {
 	
 	public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving)
 	{
-		ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
+		ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp2 instanceof ModItemTier) temp = (ModItemTier)temp2; }
 		boolean b = true;
 		if(temp != null && temp.getSpecialFunctionHandler() != null)
 		{
@@ -32,7 +32,7 @@ public class SCMShovelItem extends ShovelItem {
 	
 	public ActionResultType onItemUse(ItemUseContext context)
 	{
-		ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
+		ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp2 instanceof ModItemTier) temp = (ModItemTier)temp2; }
 		if(temp != null && temp.getSpecialFunctionHandler() != null) {
 			return temp.getSpecialFunctionHandler().onItemUse(context);
 		}
@@ -42,7 +42,7 @@ public class SCMShovelItem extends ShovelItem {
 	
 	public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker)
 	{
-		ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
+		ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp2 instanceof ModItemTier) temp = (ModItemTier)temp2; }
 		boolean b = true;
 		if(temp != null && temp.getSpecialFunctionHandler() != null)
 		{

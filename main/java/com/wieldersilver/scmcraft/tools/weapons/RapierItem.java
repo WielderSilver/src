@@ -50,10 +50,6 @@ public class RapierItem extends TieredItem {
 	      return attackDamage;
 	   }
 
-	   public boolean canPlayerBreakBlockWhileHolding(BlockState state, World worldIn, BlockPos pos, PlayerEntity player) {
-	      return !player.isCreative();
-	   }
-
 	   public float getDestroySpeed(ItemStack stack, BlockState state) {
 	      Block block = state.getBlock();
 	      if (block == Blocks.COBWEB) {
@@ -70,7 +66,7 @@ public class RapierItem extends TieredItem {
 	    */
 	   public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 		   
-		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
+		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp2 instanceof ModItemTier) temp = (ModItemTier)temp2; }
 			boolean b = true;
 			if(temp != null && temp.getSpecialFunctionHandler() != null)
 			{
@@ -87,7 +83,7 @@ public class RapierItem extends TieredItem {
 	    * Called when a Block is destroyed using this Item. Return true to trigger the "Use Item" statistic.
 	    */
 	   public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving) {
-		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
+		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp2 instanceof ModItemTier) temp = (ModItemTier)temp2; }
 			boolean b = true;
 			if(temp != null && temp.getSpecialFunctionHandler() != null)
 			{
@@ -125,7 +121,7 @@ public class RapierItem extends TieredItem {
 	   
 	   public ActionResultType onItemUse(ItemUseContext context)
 		{
-		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp instanceof ModItemTier) temp = (ModItemTier)temp2; }
+		   ModItemTier temp = null; { IItemTier temp2 = this.getTier(); if(temp2 instanceof ModItemTier) temp = (ModItemTier)temp2; }
 			if(temp != null && temp.getSpecialFunctionHandler() != null)
 			{
 				return temp.getSpecialFunctionHandler().onItemUse(context);
