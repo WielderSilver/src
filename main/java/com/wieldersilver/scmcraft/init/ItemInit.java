@@ -3,6 +3,7 @@ package com.wieldersilver.scmcraft.init;
 import com.wieldersilver.scmcraft.scmcraft;
 import com.wieldersilver.scmcraft.armor.ModArmorMaterial;
 import com.wieldersilver.scmcraft.armor.RubyArmorItem;
+import com.wieldersilver.scmcraft.spells.Tome;
 import com.wieldersilver.scmcraft.tools.ModItemTier;
 import com.wieldersilver.scmcraft.tools.SCMAxeItem;
 import com.wieldersilver.scmcraft.tools.SCMHoeItem;
@@ -43,7 +44,7 @@ public class ItemInit
 	public static final Item pole = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("pole");
 	
 	public static final Item scrawl = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("scrawl");
-	public static final Item tome = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("tome");
+	public static final Item tome = new Tome(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("tome");
 
 
 	//Tools

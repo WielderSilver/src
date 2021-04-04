@@ -7,6 +7,7 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 
 public class ThunderSpell extends Spell {
 
@@ -22,7 +23,10 @@ public class ThunderSpell extends Spell {
         Vec3d vec3d = player.getPositionVec().add(player.getLook(1f).scale(3f)).add(player.getMotion().scale(4f));
 		
 		LightningBoltEntity lightning = new LightningBoltEntity(world, vec3d.getX(), player.getPosition().getY(), vec3d.getZ(), false);
-		world.addEntity(lightning);
+		if(world instanceof ServerWorld)
+		{
+			((ServerWorld)world).addLightningBolt(lightning);
+		}
 	}
 
 }
