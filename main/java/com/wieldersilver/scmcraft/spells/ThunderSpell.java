@@ -44,10 +44,7 @@ public class ThunderSpell extends Spell {
 		{
 			//normalize look vector to be a two-dimensional (x, z) unit vector
 			Vec3d look = player.getLook(1);
-			double x = look.x;
-			double z = look.z;
-			double angle = Math.atan2(z, x);
-			look = new Vec3d(Math.cos(angle), 0, Math.sin(angle));
+			look = new Vec3d(look.x, 0, look.z).normalize();
 			
 			vec3d = player.getEyePosition(1).add(look.scale(reach));
 			vec3d = new Vec3d(vec3d.x, player.getPositionVec().y, vec3d.z);

@@ -15,7 +15,7 @@ import net.minecraft.world.World;
 
 public class Tome extends Item 
 {
-	private Spell spell = SpellInit.THUNDER;
+	private Spell spell = SpellInit.FIRE;
 	
 	public Tome(Properties properties) {
 		super(properties);

@@ -15,6 +15,7 @@ import net.minecraftforge.registries.RegistryBuilder;
 public class SpellInit 
 {
 	public static final Spell THUNDER = new ThunderSpell().setRegistryName("thunder");
+	public static final Spell FIRE = new FireSpell().setRegistryName("fire");
 	
 	@SubscribeEvent
 	public static void registerRegistry(final RegistryEvent.NewRegistry event)
@@ -29,6 +30,7 @@ public class SpellInit
 	public static void registerSpells(final RegistryEvent.Register<Spell> event)
 	{
 		event.getRegistry().register(THUNDER);
+		event.getRegistry().register(FIRE);
 	}
 
 }
