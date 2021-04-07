@@ -1,7 +1,14 @@
 package com.wieldersilver.scmcraft.spells;
 
+import com.wieldersilver.scmcraft.tools.weapons.IExtendedReach;
+import com.wieldersilver.scmcraft.util.Utils;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.LightningBoltEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -17,14 +24,44 @@ public class ThunderSpell extends Spell {
 	}
 
 	@Override
-	public void activate(World world, ItemStack item, PlayerEntity player) {
+	public void activate(World world, ItemStack item, PlayerEntity player) 
+	{
+		Minecraft mc = Minecraft.getInstance();
 		
-		
-        Vec3d vec3d = player.getPositionVec().add(player.getLook(1f).scale(3f)).add(player.getMotion().scale(4f));
-		
-		LightningBoltEntity lightning = new LightningBoltEntity(world, vec3d.getX(), player.getPosition().getY(), vec3d.getZ(), false);
-		if(world instanceof ServerWorld)
+		//caution: this is client-side reach
+		float reach = mc.playerController.getBlockReachDistance();
+		Item itemRef = item.getItem();
+		if(itemRef instanceof IExtendedReach)
 		{
+			reach = Math.max(((IExtendedReach)itemRef).getReach(), reach);
+		}
+		reach *= 1.5f;
+		Entity target = Utils.getExtendedRangeTarget(reach);
+		
+		
+        Vec3d vec3d;
+		if(target == null)
+		{
+			//normalize look vector to be a two-dimensional (x, z) unit vector
+			Vec3d look = player.getLook(1);
+			double x = look.x;
+			double z = look.z;
+			double angle = Math.atan2(z, x);
+			look = new Vec3d(Math.cos(angle), 0, Math.sin(angle));
+			
+			vec3d = player.getEyePosition(1).add(look.scale(reach));
+			vec3d = new Vec3d(vec3d.x, player.getPositionVec().y, vec3d.z);
+		}
+		else
+		{
+			vec3d = target.getPositionVec();
+		}
+        
+        
+		LightningBoltEntity lightning = new LightningBoltEntity(world, vec3d.x, vec3d.y, vec3d.z, false);
+		if(!world.isRemote)
+		{
+			lightning.setCaster((ServerPlayerEntity)player);
 			((ServerWorld)world).addLightningBolt(lightning);
 		}
 	}

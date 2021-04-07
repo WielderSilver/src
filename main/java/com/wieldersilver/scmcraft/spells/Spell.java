@@ -18,5 +18,11 @@ public abstract class Spell extends ForgeRegistryEntry<Spell>
 		this.cooldown = cooldown;
 	}
 	
+	/**
+	 * Specify this for any spell implemented
+	 * @param world
+	 * @param item
+	 * @param player
+	 */
 	public abstract void activate(World world, ItemStack item, PlayerEntity player);
 }
