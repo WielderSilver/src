@@ -63,6 +63,7 @@ public class FireSpell extends Spell {
 		if(!world.isRemote)
 		{
 			((ServerWorld)world).addEntity(fire);
+			System.out.println("Fire");
 		}
 	}
 
