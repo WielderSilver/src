@@ -6,6 +6,7 @@ package com.wieldersilver.scmcraft.entities;
 import com.wieldersilver.scmcraft.init.EntityInit;
 
 import net.minecraft.block.Blocks;
+import net.minecraft.command.arguments.EntityAnchorArgument;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -15,6 +16,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.EntityRayTraceResult;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -26,6 +28,8 @@ import net.minecraft.world.World;
 public class FireProjectile extends AbstractFireballEntity {
 
 	protected LivingEntity target = null;
+	protected float velYaw;
+	protected float velPitch;
 	
 	/**
 	 * @param p_i50166_1_
@@ -43,15 +47,37 @@ public class FireProjectile extends AbstractFireballEntity {
 		this.accelerationX = 0;
 		this.accelerationY = 0;
 		this.accelerationZ = 0;
+		
+		Vec3d eyePos = shooter.getEyePosition(1);
+		this.setPosition(eyePos.x, eyePos.y, eyePos.z);
+		Vec3d look = shooter.getLook(1);
+		
+		float yaw = shooter.rotationYaw;
+		float pitch = shooter.rotationPitch;
+		
+		this.setRotation(yaw, pitch);
+		
+		this.setMotion(this.getLook(1).scale(this.getMotionFactor()));
 	}
 	
 	public FireProjectile(World world, LivingEntity shooter)
 	{
+		//Vec3d eyePos = shooter.getEyePosition(1);
 		super(EntityInit.FIRE_PROJECTILE, shooter, 0, 0, 0, world);
 		this.accelerationX = 0;
 		this.accelerationY = 0;
 		this.accelerationZ = 0;
-		this.setMotion(shooter.getLook(1).scale(this.getMotionFactor()));
+		
+		Vec3d eyePos = shooter.getEyePosition(1);
+		this.setPosition(eyePos.x, eyePos.y, eyePos.z);
+		Vec3d look = shooter.getLook(1);
+		
+		float yaw = shooter.rotationYaw;
+		float pitch = shooter.rotationPitch;
+		
+		this.setRotation(yaw, pitch);
+		
+		this.setMotion(this.getLook(1).scale(this.getMotionFactor()));
 	}
 	
 	public FireProjectile(World worldIn, LivingEntity shooter, double accelX, double accelY, double accelZ) {
@@ -65,12 +91,38 @@ public class FireProjectile extends AbstractFireballEntity {
     @Override
     public void tick()
     {
-    	
-    	Vec3d pos = this.getPositionVec();
-		Vec3d vel = this.getMotion();
     	if(!this.world.isRemote && this.target != null)
     	{
-    		Vec3d targetPos = target.getPositionVec();
+			//public void lookAt(EntityAnchorArgument.Type p_200602_1_, Vec3d p_200602_2_)
+			Vec3d vec3d = EntityAnchorArgument.Type.EYES.apply(this);
+			Vec3d targetPos = target.getPositionVec();
+			double d0 = targetPos.x - vec3d.x;
+			double d1 = targetPos.y - vec3d.y;
+			double d2 = targetPos.z - vec3d.z;
+			double d3 = (double)MathHelper.sqrt(d0 * d0 + d2 * d2);
+			float pitch = MathHelper.wrapDegrees((float)(-(MathHelper.atan2(d1, d3) * (double)(180F / (float)Math.PI))));
+			float yaw = MathHelper.wrapDegrees((float)(MathHelper.atan2(d2, d0) * (double)(180F / (float)Math.PI)) - 90.0F);
+			
+			float newPitch = MathHelper.approachDegrees(this.rotationPitch, pitch, this.maxDegreeChange());
+			float newYaw = MathHelper.approachDegrees(this.rotationYaw, yaw, this.maxDegreeChange());
+			this.setRotation(newYaw, newPitch);
+			
+			this.setRotationYawHead(this.rotationYaw);
+			this.prevRotationPitch = this.rotationPitch;
+			this.prevRotationYaw = this.rotationYaw;
+			
+			this.setMotion(this.getLook(1).scale(this.getMotionFactor()));
+    	}
+    	
+    	super.tick();
+		
+		/*
+		
+    	if(!this.world.isRemote && this.target != null)
+    	{
+    		Vec3d velDiff = vel.add(newVel.scale(-1));
+    		
+    		//Vec3d targetPos = target.getPositionVec();
     		Vec3d posDiff = targetPos.add(pos.scale(-1));
     		double distance = pos.distanceTo(targetPos);
     		if(pos.add(vel.scale(distance)).distanceTo(targetPos) <= distance)
@@ -86,7 +138,7 @@ public class FireProjectile extends AbstractFireballEntity {
     	this.accelerationY = 0;
     	this.accelerationZ = 0;
     	
-    	super.tick();
+    	super.tick();*/
     }
     
     /**
@@ -144,5 +196,10 @@ public class FireProjectile extends AbstractFireballEntity {
     @Override
     protected float getMotionFactor() {
        return 1.5f;
+    }
+    
+    protected float maxDegreeChange() 
+    {
+    	return 10f;
     }
 }
