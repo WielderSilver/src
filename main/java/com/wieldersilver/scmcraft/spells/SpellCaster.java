@@ -3,11 +3,13 @@
  */
 package com.wieldersilver.scmcraft.spells;
 
+import com.wieldersilver.scmcraft.scmcraft;
 import com.wieldersilver.scmcraft.init.SpellInit;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 /**
@@ -20,6 +22,12 @@ public class SpellCaster
 	{
 		//System.out.println(spellName);
 		spellName = spellName.toLowerCase();
+		ResourceLocation resource = new ResourceLocation(scmcraft.MOD_ID, spellName);
+		if(SpellInit.SPELLS.containsKey(resource))
+		{
+			SpellInit.SPELLS.getValue(resource).activate(world, item, player);
+		}
+		/*
 		switch(spellName)
 		{
 			case "thunder":
@@ -30,14 +38,6 @@ public class SpellCaster
 				return;
 			default:
 				return;
-		}
-	}
-	
-	/**
-	 * Called each tick as long the item is on a player inventory. Uses by maps to check if is on a player hand and
-	 * update it's contents.
-	 */
-	public void inventoryTick(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) 
-	{
+		}*/
 	}
 }

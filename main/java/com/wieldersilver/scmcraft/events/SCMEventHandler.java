@@ -14,10 +14,12 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.InputEvent.ClickInputEvent;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -126,5 +128,44 @@ public class SCMEventHandler {
 	    	SCMPacketHandler.INSTANCE.sendToServer(new MessageSpellCast(button));
 	    }
 	}
-
+	
+	
+	/**
+	 * This shows the players what spells are on their current item
+	 * @param event
+	 */
+	@OnlyIn(Dist.CLIENT)
+	@SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
+	public static void spellToolTipEvent(ItemTooltipEvent event)
+	{
+		ItemStack stack = event.getItemStack();
+		
+		CompoundNBT nbt;
+	    if (stack.hasTag())
+	    {
+	        nbt = stack.getTag();
+	    }
+	    else
+	    {
+	        return;
+	    }
+	    
+	    if(nbt.contains("SCM_spell_0"))
+	    {
+	    	StringTextComponent tooltip = new StringTextComponent("Spell Slot 1: " + nbt.getString("SCM_spell_0"));
+	    	event.getToolTip().add(tooltip);
+	    }
+	    
+	    if(nbt.contains("SCM_spell_1"))
+	    {
+	    	StringTextComponent tooltip = new StringTextComponent("Spell Slot 2: " + nbt.getString("SCM_spell_0"));
+	    	event.getToolTip().add(tooltip);
+	    }
+	    
+	    if(nbt.contains("SCM_spell_2"))
+	    {
+	    	StringTextComponent tooltip = new StringTextComponent("Spell Slot 3: " + nbt.getString("SCM_spell_0"));
+	    	event.getToolTip().add(tooltip);
+	    }
+	}
 }

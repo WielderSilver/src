@@ -8,6 +8,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
+import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.RegistryBuilder;
 
@@ -15,6 +16,8 @@ import net.minecraftforge.registries.RegistryBuilder;
 @ObjectHolder(scmcraft.MOD_ID)
 public class SpellInit 
 {
+	public static IForgeRegistry<Spell> SPELLS;
+	
 	public static final Spell THUNDER = new ThunderSpell().setRegistryName("thunder");
 	public static final Spell FIRE = new FireSpell().setRegistryName("fire");
 	
@@ -24,7 +27,7 @@ public class SpellInit
 		
 		
 		RegistryBuilder<Spell> registryBuilder = new RegistryBuilder().setName(ResourceLocations.SPELLS).setType(Spell.class).setMaxID(Integer.MAX_VALUE - 1);
-		registryBuilder.create();
+		SPELLS = registryBuilder.create();
 	}
 
 	@SubscribeEvent
