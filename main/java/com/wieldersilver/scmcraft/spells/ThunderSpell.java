@@ -19,7 +19,7 @@ import net.minecraft.world.server.ServerWorld;
 public class ThunderSpell extends Spell {
 
 	public ThunderSpell() {
-		super("thunder", 2, 100);
+		super("thunder", 1, 100);
 		
 	}
 

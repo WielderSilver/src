@@ -20,6 +20,7 @@ public class SpellInit
 	
 	public static final Spell THUNDER = new ThunderSpell().setRegistryName("thunder");
 	public static final Spell FIRE = new FireSpell().setRegistryName("fire");
+	public static final Spell BLIZZARD = new BlizzardSpell().setRegistryName("blizzard");
 	
 	@SubscribeEvent
 	public static void registerRegistry(final RegistryEvent.NewRegistry event)
@@ -35,7 +36,7 @@ public class SpellInit
 	{
 		event.getRegistry().register(THUNDER);
 		event.getRegistry().register(FIRE);
-		
+		event.getRegistry().register(BLIZZARD);
 		
 	}
 	

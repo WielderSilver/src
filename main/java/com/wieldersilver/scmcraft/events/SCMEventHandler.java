@@ -158,13 +158,13 @@ public class SCMEventHandler {
 	    
 	    if(nbt.contains("SCM_spell_1"))
 	    {
-	    	StringTextComponent tooltip = new StringTextComponent("Spell Slot 2: " + nbt.getString("SCM_spell_0"));
+	    	StringTextComponent tooltip = new StringTextComponent("Spell Slot 2: " + nbt.getString("SCM_spell_1"));
 	    	event.getToolTip().add(tooltip);
 	    }
 	    
 	    if(nbt.contains("SCM_spell_2"))
 	    {
-	    	StringTextComponent tooltip = new StringTextComponent("Spell Slot 3: " + nbt.getString("SCM_spell_0"));
+	    	StringTextComponent tooltip = new StringTextComponent("Spell Slot 3: " + nbt.getString("SCM_spell_2"));
 	    	event.getToolTip().add(tooltip);
 	    }
 	}
