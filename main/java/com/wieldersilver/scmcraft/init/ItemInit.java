@@ -24,7 +24,9 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTier;
+import net.minecraft.util.NonNullList;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -44,7 +46,7 @@ public class ItemInit
 	public static final Item pole = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("pole");
 	
 	public static final Item scrawl = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("scrawl");
-	public static final Item tome = new Tome(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("tome");
+	public static final Item tome = new Tome(new Item.Properties()).setRegistryName("tome");
 
 
 	//Tools
@@ -205,6 +207,7 @@ public class ItemInit
 	public static final Item stone_nunchucks = new NunchuckItem(ItemTier.STONE, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("stone_nunchucks");
 	public static final Item wooden_nunchucks = new NunchuckItem(ItemTier.WOOD, new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("wood_nunchucks");
 
+	
 
 	
 	@SubscribeEvent
@@ -363,5 +366,8 @@ public class ItemInit
 		event.getRegistry().register(iron_nunchucks);
 		event.getRegistry().register(gold_nunchucks);
 		event.getRegistry().register(diamond_nunchucks);
+		
+		//temp
+		//ItemGroup.COMBAT.fill(NonNullList.from(null, ((Tome)tome).makeTome("thunder"), ((Tome)tome).makeTome("fire")));
 	}
 }

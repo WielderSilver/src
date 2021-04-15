@@ -50,7 +50,6 @@ public class FireProjectile extends AbstractFireballEntity {
 		
 		Vec3d eyePos = shooter.getEyePosition(1);
 		this.setPosition(eyePos.x, eyePos.y, eyePos.z);
-		Vec3d look = shooter.getLook(1);
 		
 		float yaw = shooter.rotationYaw;
 		float pitch = shooter.rotationPitch;
@@ -70,7 +69,6 @@ public class FireProjectile extends AbstractFireballEntity {
 		
 		Vec3d eyePos = shooter.getEyePosition(1);
 		this.setPosition(eyePos.x, eyePos.y, eyePos.z);
-		Vec3d look = shooter.getLook(1);
 		
 		float yaw = shooter.rotationYaw;
 		float pitch = shooter.rotationPitch;

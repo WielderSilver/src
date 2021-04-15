@@ -3,6 +3,7 @@ package com.wieldersilver.scmcraft.init;
 import com.wieldersilver.scmcraft.scmcraft;
 import com.wieldersilver.scmcraft.spells.*;
 
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -31,6 +32,10 @@ public class SpellInit
 	{
 		event.getRegistry().register(THUNDER);
 		event.getRegistry().register(FIRE);
+		
+		
 	}
+	
+	
 
 }
