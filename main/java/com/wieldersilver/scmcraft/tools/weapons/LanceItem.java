@@ -56,7 +56,7 @@ public class LanceItem extends TieredItem implements IExtendedReach {
 	         return 15.0F;
 	      } else {
 	         Material material = state.getMaterial();
-	         return material != Material.PLANTS && material != Material.TALL_PLANTS && material != Material.CORAL && !state.isIn(BlockTags.LEAVES) && material != Material.GOURD ? 1.0F : 1.5F;
+	         return material != Material.PLANTS && material != Material.TALL_PLANTS && material != Material.CORAL && !state.isIn(BlockTags.LEAVES) && material != Material.GOURD ? super.getDestroySpeed(stack, state) : super.getDestroySpeed(stack, state);
 	      }
 	   }
 

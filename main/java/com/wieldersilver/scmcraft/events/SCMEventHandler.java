@@ -1,9 +1,11 @@
 package com.wieldersilver.scmcraft.events;
 
 import com.wieldersilver.scmcraft.scmcraft;
+import com.wieldersilver.scmcraft.init.ItemInit;
 import com.wieldersilver.scmcraft.net.MessageExtendedReachAttack;
 import com.wieldersilver.scmcraft.net.MessageSpellCast;
 import com.wieldersilver.scmcraft.net.SCMPacketHandler;
+import com.wieldersilver.scmcraft.spells.Scrawl;
 import com.wieldersilver.scmcraft.spells.SpellCaster;
 import com.wieldersilver.scmcraft.tools.weapons.IExtendedReach;
 import com.wieldersilver.scmcraft.util.Utils;
@@ -11,6 +13,7 @@ import com.wieldersilver.scmcraft.util.Utils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
@@ -124,6 +127,12 @@ public class SCMEventHandler {
 	    	String spellName = nbt.get("SCM_spell_" + button).getString();
 	    	World world = player.getEntityWorld();
 	    	SpellCaster.cast(spellName, world, stack, player);
+	    	if(stack.getItem() == ItemInit.scrawl)
+	    	{
+		    	stack.damageItem(1, player, (p_220045_0_) -> {
+			         p_220045_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+			      });
+	    	}
 	    	//System.out.println("boop");
 	    	SCMPacketHandler.INSTANCE.sendToServer(new MessageSpellCast(button));
 	    }

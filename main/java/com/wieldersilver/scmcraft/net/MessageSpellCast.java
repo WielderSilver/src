@@ -2,9 +2,11 @@ package com.wieldersilver.scmcraft.net;
 
 import java.util.function.Supplier;
 
+import com.wieldersilver.scmcraft.init.ItemInit;
 import com.wieldersilver.scmcraft.spells.SpellCaster;
 
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.PacketBuffer;
@@ -59,6 +61,12 @@ public class MessageSpellCast {
 				    	String spellName = nbt.get("SCM_spell_" + button).getString();
 				    	World world = sender.getEntityWorld();
 				    	SpellCaster.cast(spellName, world, stack, sender);
+				    	if(stack.getItem() == ItemInit.scrawl)
+				    	{
+					    	stack.damageItem(1, sender, (p_220045_0_) -> {
+						         p_220045_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+						      });
+				    	}
 				    }
 				}
 				

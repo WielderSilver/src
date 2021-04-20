@@ -3,7 +3,9 @@ package com.wieldersilver.scmcraft.init;
 import com.wieldersilver.scmcraft.scmcraft;
 import com.wieldersilver.scmcraft.armor.ModArmorMaterial;
 import com.wieldersilver.scmcraft.armor.RubyArmorItem;
+import com.wieldersilver.scmcraft.spells.Scrawl;
 import com.wieldersilver.scmcraft.spells.Tome;
+import com.wieldersilver.scmcraft.tabs.Tabs;
 import com.wieldersilver.scmcraft.tools.ModItemTier;
 import com.wieldersilver.scmcraft.tools.SCMAxeItem;
 import com.wieldersilver.scmcraft.tools.SCMHoeItem;
@@ -24,9 +26,7 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTier;
-import net.minecraft.util.NonNullList;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -45,8 +45,8 @@ public class ItemInit
 	public static final Item mythril_shard = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("mythril_shard");
 	public static final Item pole = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("pole");
 	
-	public static final Item scrawl = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("scrawl");
-	public static final Item tome = new Tome(new Item.Properties()).setRegistryName("tome");
+	public static final Item scrawl = new Scrawl(new Item.Properties().group(Tabs.SPELLS)).setRegistryName("scrawl");
+	public static final Item tome = new Tome(new Item.Properties().group(Tabs.SPELLS)).setRegistryName("tome");
 
 
 	//Tools

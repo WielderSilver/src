@@ -160,6 +160,7 @@
 	"item.scmcraft.gold_nunchucks": "Gold Nunchucks",
 	"item.scmcraft.diamond_nunchucks": "Diamond Nunchucks",
 	"item.scmcraft.wood_nunchucks": "Wooden Nunchucks",
-	"item.scmcraft.stone_nunchucks": "Stone Nunchucks"
+	"item.scmcraft.stone_nunchucks": "Stone Nunchucks",
 	
+	"itemGroup.scm_spells": "Spells"
 }
