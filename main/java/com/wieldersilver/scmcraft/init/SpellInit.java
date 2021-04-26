@@ -4,6 +4,7 @@ import com.wieldersilver.scmcraft.scmcraft;
 import com.wieldersilver.scmcraft.spells.*;
 
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.registry.Registry;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -29,6 +30,7 @@ public class SpellInit
 		
 		RegistryBuilder<Spell> registryBuilder = new RegistryBuilder().setName(ResourceLocations.SPELLS).setType(Spell.class).setMaxID(Integer.MAX_VALUE - 1);
 		SPELLS = registryBuilder.create();
+		
 	}
 
 	@SubscribeEvent

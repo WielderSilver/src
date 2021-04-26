@@ -1,14 +1,19 @@
 package com.wieldersilver.scmcraft.init;
 
+import com.mojang.datafixers.types.Type;
 import com.wieldersilver.scmcraft.scmcraft;
 import com.wieldersilver.scmcraft.blocks.*;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.tileentity.FurnaceTileEntity;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -32,8 +37,8 @@ public class BlockInit
 	public static final Block sapphire_ore = new SCMOreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0f, 6.0f).sound(SoundType.STONE).harvestLevel(2).harvestTool(ToolType.PICKAXE)).setRegistryName("sapphire_ore");
 	public static final Block mythril_ore = new SCMOreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0f, 6.0f).sound(SoundType.STONE).harvestLevel(2).harvestTool(ToolType.PICKAXE)).setRegistryName("mythril_ore");
 	
-	public static final Block spell_station = new Block(Block.Properties.create(Material.WOOD).hardnessAndResistance(5.0f, 1200.0f).sound(SoundType.WOOD).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName("spell_station");
-
+	public static final Block spell_station = new SpellStation(Block.Properties.create(Material.WOOD).hardnessAndResistance(5.0f, 1200.0f).sound(SoundType.WOOD).harvestLevel(0).harvestTool(ToolType.PICKAXE)).setRegistryName("spell_station");
+	
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) 
 	{

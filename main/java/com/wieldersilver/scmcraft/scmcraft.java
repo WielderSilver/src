@@ -3,14 +3,18 @@ package com.wieldersilver.scmcraft;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.wieldersilver.scmcraft.gui.GUISpellStation;
 import com.wieldersilver.scmcraft.init.BlockInit;
+import com.wieldersilver.scmcraft.init.ContainerInit;
 import com.wieldersilver.scmcraft.init.ItemInit;
 import com.wieldersilver.scmcraft.net.SCMPacketHandler;
 import com.wieldersilver.scmcraft.worldgen.OreGeneration;
 
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -48,9 +52,16 @@ public class scmcraft
     	
     }
 
-    private void doClientStuff(final FMLClientSetupEvent event) 
+    @SuppressWarnings("deprecation")
+	private void doClientStuff(final FMLClientSetupEvent event) 
     {
-
+    	// Register ContainerType Screens
+		// ScreenManager.registerFactory is not safe to call during parallel mod loading so we queue it to run later
+		DeferredWorkQueue.runLater(() -> 
+		{
+			ScreenManager.registerFactory(ContainerInit.SPELL_STATION, GUISpellStation::new);
+			LOGGER.debug("Registered ContainerType Screens");
+		});
     }
     
     @SubscribeEvent

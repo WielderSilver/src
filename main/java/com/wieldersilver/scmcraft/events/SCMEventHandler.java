@@ -5,7 +5,6 @@ import com.wieldersilver.scmcraft.init.ItemInit;
 import com.wieldersilver.scmcraft.net.MessageExtendedReachAttack;
 import com.wieldersilver.scmcraft.net.MessageSpellCast;
 import com.wieldersilver.scmcraft.net.SCMPacketHandler;
-import com.wieldersilver.scmcraft.spells.Scrawl;
 import com.wieldersilver.scmcraft.spells.SpellCaster;
 import com.wieldersilver.scmcraft.tools.weapons.IExtendedReach;
 import com.wieldersilver.scmcraft.util.Utils;
