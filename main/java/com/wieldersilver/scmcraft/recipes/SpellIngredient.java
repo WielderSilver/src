@@ -54,9 +54,14 @@ public class SpellIngredient extends NBTIngredient
         if (input == null)
             return false;
         
+        //System.out.println("them: " + input.getItem().toString());
+        
         CompoundNBT inputNBT = input.getOrCreateTag();
+        
         for(ItemStack stack : stacks)
         {
+        	System.out.println("me: " + stack.getItem().toString());
+        	
 	        CompoundNBT stackNBT = stack.getOrCreateTag();
 	        
 	        boolean noSpells = true;
@@ -70,18 +75,16 @@ public class SpellIngredient extends NBTIngredient
 		        	noSpells = false;
 		        	flag = flag && stackNBT.getString(key).toLowerCase().equals(inputNBT.getString(key).toLowerCase());
 		        }
-		        else if(noSpells)
-		        {
-		        	flag = false;
-		        }
 	        }
 	        
-	        flag = flag && stack.getItem() == input.getItem();
-	        
-	        if(flag)
+	        //If the recipe item doesn't have spells
+	        if(noSpells)
 	        {
-	        	return true;
+	        	return stack.getItem().equals(input.getItem());
 	        }
+	        
+	        return flag && stack.getItem().equals(input.getItem());
+	        
         }
         
         //Can't use areItemStacksEqualUsingNBTShareTag because it compares stack size as well

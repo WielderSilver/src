@@ -126,12 +126,10 @@ public class SCMEventHandler {
 	    	String spellName = nbt.get("SCM_spell_" + button).getString();
 	    	World world = player.getEntityWorld();
 	    	SpellCaster.cast(spellName, world, stack, player);
-	    	if(stack.getItem() == ItemInit.scrawl)
-	    	{
-		    	stack.damageItem(1, player, (p_220045_0_) -> {
-			         p_220045_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-			      });
-	    	}
+	    	stack.damageItem(1, player, (p_220045_0_) -> {
+		         p_220045_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		      });
+	    	
 	    	//System.out.println("boop");
 	    	SCMPacketHandler.INSTANCE.sendToServer(new MessageSpellCast(button));
 	    }

@@ -15,6 +15,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.CraftResultInventory;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.RecipeBookContainer;
@@ -94,12 +95,42 @@ public class ContainerSpellStation extends RecipeBookContainer<InventorySpellSta
 	            	
 	            });
 				
-				inputInventory.setInventorySlotContents(0, ItemStack.EMPTY);
+				ItemStack s;
+				
+				s = inputInventory.getStackInSlot(0);
+				if(s.isStackable())
+				{
+					s.setCount(s.getCount() - 1);
+				}
+				else
+				{
+					inputInventory.setInventorySlotContents(0, ItemStack.EMPTY);
+				}
+				
+				//inputInventory.setInventorySlotContents(0, ItemStack.EMPTY);
 				for(int i = 0; i < 3; i++)
 				{
+					
 					if(inputInventory.getStackInSlot(i + 1).getItem() != ItemInit.tome)
 					{
-						inputInventory.setInventorySlotContents(i + 1, ItemStack.EMPTY);
+						s = inputInventory.getStackInSlot(i + 1);
+						if(s.isStackable())
+						{
+							s.setCount(s.getCount() - 1);
+						}
+						else
+						{
+							inputInventory.setInventorySlotContents(i + 1, ItemStack.EMPTY);
+						}
+					}
+					else
+					{
+						s = inputInventory.getStackInSlot(i + 1);
+						s.damageItem(1, player, 
+						(playerEntity) -> 
+						{ 
+							playerEntity.sendBreakAnimation(EquipmentSlotType.MAINHAND); 
+						});
 					}
 				}
 				
@@ -161,20 +192,21 @@ public class ContainerSpellStation extends RecipeBookContainer<InventorySpellSta
 				}
 			}*/
 			
+			
 			Optional<SpellRecipe> optional = world.getServer().getRecipeManager().getRecipe(SpellRecipe.TYPE, inputInventory, world);
+			
+			//System.out.println("Recipe Constructor called: " + SpellRecipe.spellRecipeConstructorCalled);
+			//System.out.println("Read Buffer called: " + SpellRecipe.serializerReadBufferCalled);
 			
 			if(optional.isPresent())
 			{
 				SpellRecipe recipe = optional.get();
-				if(outputInventory.canUseRecipe(world, sPlayer, recipe))
-				{
-					stack = recipe.getCraftingResult(inputInventory);
-				}
-				System.out.println("bup");
+				
+				stack = recipe.getCraftingResult(inputInventory);
 			}
-			System.out.println("badup");
 			
 			outputInventory.setInventorySlotContents(0, stack);
+			
 		}
 	}
 

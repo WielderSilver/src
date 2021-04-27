@@ -63,7 +63,7 @@ public class SpellStation extends Block implements INamedContainerProvider
 		{
 			player.openContainer(blockState.getContainer(world, blockPos));
 			
-			System.out.println("Woot woot");
+			//System.out.println("Woot woot");
 		}
 		return ActionResultType.SUCCESS;
 	}

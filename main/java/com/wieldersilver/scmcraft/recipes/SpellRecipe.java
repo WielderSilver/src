@@ -41,6 +41,9 @@ public class SpellRecipe implements IRecipe<InventorySpellStation>
 	private final SpellIngredient spell3;
 	private final SpellIngredient result;
 	
+	public static boolean spellRecipeConstructorCalled = false;
+	public static boolean serializerReadBufferCalled = false;
+	
 	
 	public static final IRecipeType<SpellRecipe> TYPE = new IRecipeType<SpellRecipe>() 
 	{
@@ -59,6 +62,9 @@ public class SpellRecipe implements IRecipe<InventorySpellStation>
 		this.spell2 = spell2;
 		this.spell3 = spell3;
 		this.result = result;
+		
+		spellRecipeConstructorCalled = true;
+		
 		System.out.println("This is a recipe: " + id.toString());
 	}
 
@@ -96,6 +102,7 @@ public class SpellRecipe implements IRecipe<InventorySpellStation>
 	public boolean matches(InventorySpellStation inv, World worldIn) 
 	{
 		System.out.println("recipe check: " + id.toString());
+		
 		return inputItem.test(inv.getStackInSlot(0)) && spell1.test(inv.getStackInSlot(1)) && spell2.test(inv.getStackInSlot(2)) && spell3.test(inv.getStackInSlot(3));
 	}
 
@@ -109,9 +116,15 @@ public class SpellRecipe implements IRecipe<InventorySpellStation>
 	{
 		private static final ResourceLocation NAME = new ResourceLocation(scmcraft.MOD_ID, "spell_crafting");
 		
+		public Serializer()
+		{
+			
+		}
+		
 		@Override
 		public SpellRecipe read(ResourceLocation recipeId, JsonObject json) 
 		{
+			
 			
 			String group = JSONUtils.getString(json, "group", "");
 			Map<String, SpellIngredient> map = Utils.deserializeKey(JSONUtils.getJsonObject(json, "key"));
@@ -134,6 +147,8 @@ public class SpellRecipe implements IRecipe<InventorySpellStation>
 		@Override
 		public SpellRecipe read(ResourceLocation recipeId, PacketBuffer buffer) 
 		{
+			SpellRecipe.serializerReadBufferCalled = true;
+			
 			String group = buffer.readString(32767);
 			
 			SpellIngredient input = SpellIngredient.Serializer.INSTANCE.parse(buffer);
@@ -148,6 +163,8 @@ public class SpellRecipe implements IRecipe<InventorySpellStation>
 		@Override
 		public void write(PacketBuffer buffer, SpellRecipe recipe) 
 		{
+			System.out.println("start");
+			
 			buffer.writeString(recipe.group);
 	        
 			SpellIngredient.Serializer.INSTANCE.write(buffer, recipe.inputItem);
@@ -156,7 +173,7 @@ public class SpellRecipe implements IRecipe<InventorySpellStation>
 			SpellIngredient.Serializer.INSTANCE.write(buffer, recipe.spell3);
 			SpellIngredient.Serializer.INSTANCE.write(buffer, recipe.result);
 			
-			
+			System.out.println("end");
 		}
 		
 	}
