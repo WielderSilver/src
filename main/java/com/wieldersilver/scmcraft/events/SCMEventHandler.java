@@ -2,6 +2,7 @@ package com.wieldersilver.scmcraft.events;
 
 import com.wieldersilver.scmcraft.scmcraft;
 import com.wieldersilver.scmcraft.init.ItemInit;
+import com.wieldersilver.scmcraft.init.SpellInit;
 import com.wieldersilver.scmcraft.net.MessageExtendedReachAttack;
 import com.wieldersilver.scmcraft.net.MessageSpellCast;
 import com.wieldersilver.scmcraft.net.SCMPacketHandler;
@@ -16,7 +17,9 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -156,22 +159,22 @@ public class SCMEventHandler {
 	        return;
 	    }
 	    
-	    if(nbt.contains("SCM_spell_0"))
+	    for(int i = 0; i < 3; i++)
 	    {
-	    	StringTextComponent tooltip = new StringTextComponent("Spell Slot 1: " + nbt.getString("SCM_spell_0"));
-	    	event.getToolTip().add(tooltip);
-	    }
-	    
-	    if(nbt.contains("SCM_spell_1"))
-	    {
-	    	StringTextComponent tooltip = new StringTextComponent("Spell Slot 2: " + nbt.getString("SCM_spell_1"));
-	    	event.getToolTip().add(tooltip);
-	    }
-	    
-	    if(nbt.contains("SCM_spell_2"))
-	    {
-	    	StringTextComponent tooltip = new StringTextComponent("Spell Slot 3: " + nbt.getString("SCM_spell_2"));
-	    	event.getToolTip().add(tooltip);
+	    	String s = "SCM_spell_" + i;
+	    	if(nbt.contains(s))
+	    	{
+	    		ResourceLocation r = Utils.getSpellLocation(nbt.getString(s));
+	    		if(SpellInit.SPELLS.containsKey(r))
+	    		{
+		    		String key = SpellInit.SPELLS.getValue(r).getTranslationKey();
+		    		
+		    		String text = "Spell slot " + (i + 1) + ": " + new TranslationTextComponent(key).getUnformattedComponentText();
+		    		
+		    		
+		    		event.getToolTip().add(new StringTextComponent(text));
+	    		}
+	    	}
 	    }
 	}
 }

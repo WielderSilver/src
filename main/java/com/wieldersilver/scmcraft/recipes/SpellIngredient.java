@@ -60,7 +60,7 @@ public class SpellIngredient extends NBTIngredient
         
         for(ItemStack stack : stacks)
         {
-        	System.out.println("me: " + stack.getItem().toString());
+        	//System.out.println("me: " + stack.getItem().toString());
         	
 	        CompoundNBT stackNBT = stack.getOrCreateTag();
 	        

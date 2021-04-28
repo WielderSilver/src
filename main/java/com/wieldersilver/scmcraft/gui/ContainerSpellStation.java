@@ -10,6 +10,8 @@ import com.wieldersilver.scmcraft.init.BlockInit;
 import com.wieldersilver.scmcraft.init.ContainerInit;
 import com.wieldersilver.scmcraft.init.ItemInit;
 import com.wieldersilver.scmcraft.recipes.SpellRecipe;
+import com.wieldersilver.scmcraft.spells.Scrawl;
+import com.wieldersilver.scmcraft.spells.Tome;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -23,7 +25,9 @@ import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.RecipeItemHelper;
+import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.PacketBuffer;
+import net.minecraft.network.play.server.SSetSlotPacket;
 import net.minecraft.util.IWorldPosCallable;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
@@ -34,10 +38,10 @@ import net.minecraft.world.World;
  */
 public class ContainerSpellStation extends RecipeBookContainer<InventorySpellStation>
 {
-	private final InventorySpellStation inputInventory = new InventorySpellStation(this);
-	private final CraftResultInventory outputInventory = new CraftResultInventory();
-	private final IWorldPosCallable worldPos;
-	private final PlayerEntity player;
+	protected final InventorySpellStation inputInventory = new InventorySpellStation(this);
+	protected final CraftResultInventory outputInventory = new CraftResultInventory();
+	protected final IWorldPosCallable worldPos;
+	protected final PlayerEntity player;
 	
 	/**
 	 * @param type
@@ -68,6 +72,15 @@ public class ContainerSpellStation extends RecipeBookContainer<InventorySpellSta
 		this.worldPos = worldPos;
 		this.player = playerInventory.player;
 		
+		/* Slot numbers:
+		 * Number | Slots
+		 * 0      | inputItem
+		 * 1-3    | inputSpells
+		 * 4      | output
+		 * 5-32   | inventory
+		 * 33-42  | hotbar
+		 */
+		
 		this.addSlot(new Slot(this.inputInventory, 0, 48, 17)
 		{
 			
@@ -80,6 +93,8 @@ public class ContainerSpellStation extends RecipeBookContainer<InventorySpellSta
 				
 			});
 		}
+		
+		
 		
 		this.addSlot(new Slot(this.outputInventory, 0, 124, 35)
 		{
@@ -101,11 +116,14 @@ public class ContainerSpellStation extends RecipeBookContainer<InventorySpellSta
 				if(s.isStackable())
 				{
 					s.setCount(s.getCount() - 1);
+					
 				}
 				else
 				{
+					
 					inputInventory.setInventorySlotContents(0, ItemStack.EMPTY);
 				}
+				inventorySlots.get(0).onSlotChanged();
 				
 				//inputInventory.setInventorySlotContents(0, ItemStack.EMPTY);
 				for(int i = 0; i < 3; i++)
@@ -132,6 +150,8 @@ public class ContainerSpellStation extends RecipeBookContainer<InventorySpellSta
 							playerEntity.sendBreakAnimation(EquipmentSlotType.MAINHAND); 
 						});
 					}
+					
+					inventorySlots.get(1 + i).onSlotChanged();
 				}
 				
 	            return stack;
@@ -177,11 +197,9 @@ public class ContainerSpellStation extends RecipeBookContainer<InventorySpellSta
 	
 	protected static void updateRecipe(int windowId, World world, PlayerEntity player, InventorySpellStation inputInventory, CraftResultInventory outputInventory) 
 	{
+		
 		if(!world.isRemote)
 		{
-			ServerPlayerEntity sPlayer = (ServerPlayerEntity)player;
-			ItemStack stack = ItemStack.EMPTY;
-			
 			/*
 			Collection<IRecipe<?>> temp = world.getServer().getRecipeManager().getRecipes();
 			for(IRecipe<?> r : temp)
@@ -191,7 +209,7 @@ public class ContainerSpellStation extends RecipeBookContainer<InventorySpellSta
 					System.out.println("WE GOT ONE");
 				}
 			}*/
-			
+			ItemStack stack = ItemStack.EMPTY;
 			
 			Optional<SpellRecipe> optional = world.getServer().getRecipeManager().getRecipe(SpellRecipe.TYPE, inputInventory, world);
 			
@@ -204,10 +222,40 @@ public class ContainerSpellStation extends RecipeBookContainer<InventorySpellSta
 				
 				stack = recipe.getCraftingResult(inputInventory);
 			}
-			
+			else if(!(inputInventory.getStackInSlot(0).getItem() instanceof Scrawl || inputInventory.getStackInSlot(0).getItem() instanceof Tome) && !inputInventory.getStackInSlot(0).isStackable())
+			{
+				stack = inputInventory.getStackInSlot(0).copy();
+				CompoundNBT nbt = stack.getOrCreateTag();
+				
+				for(int i = 0; i < 3; i++)
+				{
+					ItemStack spellStack = inputInventory.getStackInSlot(i + 1);
+					if(spellStack.getItem() instanceof Scrawl || spellStack.getItem() instanceof Tome)
+					{
+						CompoundNBT spellTag = spellStack.getOrCreateTag();
+						
+						String s = "SCM_spell_" + i;
+						if(spellTag.contains(s))
+						{
+							nbt.putString(s, spellTag.getString(s));
+						}
+						
+					}
+				}
+			}
 			outputInventory.setInventorySlotContents(0, stack);
 			
+			
+			ServerPlayerEntity serverPlayer = (ServerPlayerEntity)player;
+			serverPlayer.connection.sendPacket(new SSetSlotPacket(windowId, 4, stack));
+		
 		}
+		
+		
+		
+		
+		
+		//this.inventorySlots.get(4).onSlotChanged();
 	}
 
 

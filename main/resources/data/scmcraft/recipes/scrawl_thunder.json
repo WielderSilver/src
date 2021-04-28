@@ -1,0 +1,42 @@
+{
+	"type": "scmcraft:spell_recipe",
+	"group": "scmcraft:spell_recipe",
+
+	"input":"A",
+	"spell1":"B",
+	"spell2":"C",
+	"spell3":"C",
+	"result":"D",
+	
+	"key":
+	{
+		"A":
+		[
+			{
+				"item":"minecraft:paper"
+			}
+		],
+		"B":
+		[
+			{
+				"item":"scmcraft:emerald"
+			}
+		],
+		"C":
+		[
+			{
+				"item":"scmcraft:emerald"
+			},
+			{
+				"item":"scmcraft:mythril_shard"
+			}
+		],
+		"D":
+		[
+			{
+				"item":"scmcraft:scrawl",
+				"spell":"scmcraft:thunder"
+			}
+		]
+	}
+}

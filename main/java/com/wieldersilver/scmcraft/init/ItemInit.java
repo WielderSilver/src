@@ -45,8 +45,8 @@ public class ItemInit
 	public static final Item mythril_shard = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("mythril_shard");
 	public static final Item pole = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("pole");
 	
-	public static final Item scrawl = new Scrawl(new Item.Properties().group(Tabs.SPELLS)).setRegistryName("scrawl");
-	public static final Item tome = new Tome(new Item.Properties().group(Tabs.SPELLS)).setRegistryName("tome");
+	public static final Item scrawl = new Scrawl(new Item.Properties().group(Tabs.SPELLS).maxDamage(1)).setRegistryName("scrawl");
+	public static final Item tome = new Tome(new Item.Properties().group(Tabs.SPELLS).maxDamage(128)).setRegistryName("tome");
 
 
 	//Tools

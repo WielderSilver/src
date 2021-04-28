@@ -162,5 +162,9 @@
 	"item.scmcraft.wood_nunchucks": "Wooden Nunchucks",
 	"item.scmcraft.stone_nunchucks": "Stone Nunchucks",
 	
-	"itemGroup.scm_spells": "Spells"
+	"itemGroup.scm_spells": "Spells",
+	
+	"spell.scmcraft.fire": "Fire",
+	"spell.scmcraft.blizzard": "Blizzard",
+	"spell.scmcraft.thunder": "Thunder"
 }

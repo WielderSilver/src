@@ -5,6 +5,7 @@ package com.wieldersilver.scmcraft.spells;
 
 import com.wieldersilver.scmcraft.scmcraft;
 import com.wieldersilver.scmcraft.init.SpellInit;
+import com.wieldersilver.scmcraft.util.Utils;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,15 +24,8 @@ public class SpellCaster
 		//System.out.println(spellName);
 		spellName = spellName.toLowerCase();
 		
-		ResourceLocation resource;
-		if(spellName.contains(":"))
-		{
-			resource = new ResourceLocation(spellName);
-		}
-		else
-		{
-			resource = new ResourceLocation(scmcraft.MOD_ID, spellName);
-		}
+		ResourceLocation resource = Utils.getSpellLocation(spellName);
+		
 		if(SpellInit.SPELLS.containsKey(resource))
 		{
 			SpellInit.SPELLS.getValue(resource).activate(world, item, player);

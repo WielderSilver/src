@@ -1,13 +1,19 @@
 package com.wieldersilver.scmcraft.gui;
 
+import java.util.List;
+
+import com.google.common.collect.Lists;
 import com.mojang.blaze3d.systems.RenderSystem;
 
+import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.recipebook.RecipeBookGui;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.widget.button.ImageButton;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.ClickType;
 import net.minecraft.inventory.container.Slot;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
@@ -24,11 +30,11 @@ public class GUISpellStation extends ContainerScreen<ContainerSpellStation>
 	
 	
 	
-	public void render(int p_render_1_, int p_render_2_, float p_render_3_) 
+	public void render(int x, int y, float p_render_3_) 
 	{
 		this.renderBackground();
-		super.render(p_render_1_, p_render_2_, p_render_3_);
-		
+		super.render(x, y, p_render_3_);
+		this.renderHoveredToolTip(x, y);
 	}
 	
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) 
@@ -46,5 +52,6 @@ public class GUISpellStation extends ContainerScreen<ContainerSpellStation>
 		int j = (this.height - this.ySize) / 2;
 		this.blit(i, j, 0, 0, this.xSize, this.ySize);
 	}
+	
 
 }

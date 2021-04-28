@@ -47,16 +47,8 @@ public class Scrawl extends Item {
 		
 		for(Spell spell : SpellInit.SPELLS)
 		{
-			String s = spell.getRegistryName().getPath();
-			s = s.substring(0, 1).toUpperCase() + s.substring(1);
-			
+			String s = spell.getRegistryName().toString();
 			items.add(makeScrawl(s));
 		}
-	}
-
-	@Override
-	public int getMaxDamage(ItemStack stack)
-	{
-		return 1;
 	}
 }

@@ -1,0 +1,34 @@
+{
+	"type": "scmcraft:spell_recipe",
+	"group": "scmcraft:spell_recipe",
+
+	"input":"A",
+	"spell1":"B",
+	"spell2":"B",
+	"spell3":"B",
+	"result":"D",
+	
+	"key":
+	{
+		"A":
+		[
+			{
+				"item":"minecraft:book"
+			}
+		],
+		"B":
+		[
+			{
+				"item":"scmcraft:scrawl",
+				"spell":"scmcraft:blizzard"
+			}
+		],
+		"D":
+		[
+			{
+				"item":"scmcraft:tome",
+				"spell":"scmcraft:blizzard"
+			}
+		]
+	}
+}

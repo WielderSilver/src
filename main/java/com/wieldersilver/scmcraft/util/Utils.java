@@ -7,6 +7,9 @@ import java.util.Map.Entry;
 
 import javax.annotation.Nullable;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.text.WordUtils;
+
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.google.gson.JsonElement;
@@ -113,5 +116,15 @@ public class Utils {
 
 		//map.put(" ", Ingredient.EMPTY);
 		return map;
+	}
+	
+	public static ResourceLocation getSpellLocation(String spell)
+	{
+		if(spell.contains(":"))
+		{
+			return new ResourceLocation(spell);
+		}
+		
+		return new ResourceLocation(scmcraft.MOD_ID, spell);
 	}
 }

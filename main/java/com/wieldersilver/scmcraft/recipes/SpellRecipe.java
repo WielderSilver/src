@@ -101,7 +101,7 @@ public class SpellRecipe implements IRecipe<InventorySpellStation>
 	@Override
 	public boolean matches(InventorySpellStation inv, World worldIn) 
 	{
-		System.out.println("recipe check: " + id.toString());
+		//System.out.println("recipe check: " + id.toString());
 		
 		return inputItem.test(inv.getStackInSlot(0)) && spell1.test(inv.getStackInSlot(1)) && spell2.test(inv.getStackInSlot(2)) && spell3.test(inv.getStackInSlot(3));
 	}
@@ -163,7 +163,7 @@ public class SpellRecipe implements IRecipe<InventorySpellStation>
 		@Override
 		public void write(PacketBuffer buffer, SpellRecipe recipe) 
 		{
-			System.out.println("start");
+			//System.out.println("start");
 			
 			buffer.writeString(recipe.group);
 	        
