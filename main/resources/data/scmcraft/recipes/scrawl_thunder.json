@@ -19,13 +19,13 @@
 		"B":
 		[
 			{
-				"item":"scmcraft:emerald"
+				"item":"minecraft:emerald"
 			}
 		],
 		"C":
 		[
 			{
-				"item":"scmcraft:emerald"
+				"item":"minecraft:emerald"
 			},
 			{
 				"item":"scmcraft:mythril_shard"

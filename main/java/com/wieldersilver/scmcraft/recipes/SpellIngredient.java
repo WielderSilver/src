@@ -54,6 +54,8 @@ public class SpellIngredient extends NBTIngredient
         if (input == null)
             return false;
         
+        System.out.println(stacks.toString());
+        
         //System.out.println("them: " + input.getItem().toString());
         
         CompoundNBT inputNBT = input.getOrCreateTag();
@@ -65,7 +67,8 @@ public class SpellIngredient extends NBTIngredient
 	        CompoundNBT stackNBT = stack.getOrCreateTag();
 	        
 	        boolean noSpells = true;
-	        boolean flag = true;
+	        boolean spellsEqual = true;
+	        boolean itemsEqual = stack.getItem().equals(input.getItem());
 	        
 	        for(int i = 0; i < 3; i++)
 	        {
@@ -73,17 +76,15 @@ public class SpellIngredient extends NBTIngredient
 		        if(stackNBT.contains(key))
 		        {
 		        	noSpells = false;
-		        	flag = flag && stackNBT.getString(key).toLowerCase().equals(inputNBT.getString(key).toLowerCase());
+		        	spellsEqual = spellsEqual && stackNBT.getString(key).toLowerCase().equals(inputNBT.getString(key).toLowerCase());
 		        }
 	        }
 	        
 	        //If the recipe item doesn't have spells
-	        if(noSpells)
+	        if((noSpells || spellsEqual) && itemsEqual)
 	        {
-	        	return stack.getItem().equals(input.getItem());
+	        	return true;
 	        }
-	        
-	        return flag && stack.getItem().equals(input.getItem());
 	        
         }
         

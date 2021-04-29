@@ -3,8 +3,9 @@
  */
 package com.wieldersilver.scmcraft.gui;
 
-import java.util.Collection;
 import java.util.Optional;
+
+import javax.annotation.Nullable;
 
 import com.wieldersilver.scmcraft.init.BlockInit;
 import com.wieldersilver.scmcraft.init.ContainerInit;
@@ -19,7 +20,6 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.CraftResultInventory;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.RecipeBookContainer;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
@@ -29,7 +29,6 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.play.server.SSetSlotPacket;
 import net.minecraft.util.IWorldPosCallable;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 
 /**
@@ -123,15 +122,15 @@ public class ContainerSpellStation extends RecipeBookContainer<InventorySpellSta
 					
 					inputInventory.setInventorySlotContents(0, ItemStack.EMPTY);
 				}
-				inventorySlots.get(0).onSlotChanged();
 				
 				//inputInventory.setInventorySlotContents(0, ItemStack.EMPTY);
 				for(int i = 0; i < 3; i++)
 				{
+					s = inputInventory.getStackInSlot(i + 1);
 					
-					if(inputInventory.getStackInSlot(i + 1).getItem() != ItemInit.tome)
+					if(!(s.getItem() instanceof Tome || s.getItem() instanceof Scrawl))
 					{
-						s = inputInventory.getStackInSlot(i + 1);
+						
 						if(s.isStackable())
 						{
 							s.setCount(s.getCount() - 1);
@@ -309,5 +308,108 @@ public class ContainerSpellStation extends RecipeBookContainer<InventorySpellSta
 	public int getSize() 
 	{
 		return 5;
+	}
+	
+	@Override
+	public ItemStack transferStackInSlot(PlayerEntity playerIn, int index) {
+		ItemStack itemstack = ItemStack.EMPTY;
+		Slot slot = (Slot)this.inventorySlots.get(index);
+
+		if (slot != null && slot.getHasStack()) 
+		{
+			ItemStack itemstack1 = slot.getStack();
+			itemstack = itemstack1.copy();
+
+			int invenSize = 43;
+			
+			if (index < invenSize) 
+			{
+				if (!this.mergeItemStack(itemstack1, invenSize, this.inventorySlots.size(), true)) {
+					return ItemStack.EMPTY;
+				}
+			}
+			else if (!this.mergeItemStack(itemstack1, 0, invenSize, false)) {
+				return ItemStack.EMPTY;
+			}
+
+			if (itemstack1.getCount() == 0) {
+				slot.putStack(ItemStack.EMPTY);
+			}
+			else {
+				slot.onSlotChanged();
+			}
+		}
+
+		return itemstack;
+	}
+	
+	@Override
+	protected boolean mergeItemStack(ItemStack stack, int startIndex, int endIndex, boolean reverseDirection){
+		boolean flag = false;
+		int i = startIndex;
+		if (reverseDirection) i = endIndex - 1;
+		
+		if (stack.isStackable()){
+			while (stack.getCount() > 0 && (!reverseDirection && i < endIndex || reverseDirection && i >= startIndex)){
+				Slot slot = (Slot)this.inventorySlots.get(i);
+				ItemStack itemstack = slot.getStack();
+				int maxLimit = Math.min(stack.getMaxStackSize(), slot.getSlotStackLimit());
+				
+				if (itemstack != null && areItemStacksEqual(stack, itemstack)){
+					int j = itemstack.getCount() + stack.getCount();
+					if (j <= maxLimit){
+						stack.setCount(0);
+						itemstack.setCount(j);
+						slot.onSlotChanged();
+						flag = true;
+						
+					}else if (itemstack.getCount() < maxLimit){
+						stack.setCount(stack.getCount() - (maxLimit - itemstack.getCount()));
+						itemstack.setCount(maxLimit);
+						slot.onSlotChanged();
+						flag = true;
+					}
+				}
+				if (reverseDirection){ 
+					--i;
+				}else ++i;
+			}
+		}
+		if (stack.getCount() > 0){
+			if (reverseDirection){
+				i = endIndex - 1;
+			}else i = startIndex;
+
+			while (!reverseDirection && i < endIndex || reverseDirection && i >= startIndex){
+				Slot slot1 = (Slot)this.inventorySlots.get(i);
+				ItemStack itemstack1 = slot1.getStack();
+
+				if (itemstack1 == null && slot1.isItemValid(stack)){ // Forge: Make sure to respect isItemValid in the slot.
+					if(stack.getCount() <= slot1.getSlotStackLimit()){
+						slot1.putStack(stack.copy());
+						slot1.onSlotChanged();
+						stack.setCount(0);
+						flag = true;
+						break;
+					}else{
+						itemstack1 = stack.copy();
+						stack.setCount(stack.getCount() - slot1.getSlotStackLimit());
+						itemstack1.setCount(slot1.getSlotStackLimit());
+						slot1.putStack(itemstack1);
+						slot1.onSlotChanged();
+						flag = true;
+					}					
+				}
+				if (reverseDirection){
+					--i;
+				}else ++i;
+			}
+		}
+		return flag;
+	}
+	
+	private static boolean areItemStacksEqual(ItemStack stackA, ItemStack stackB)
+	{
+		return stackA.equals(stackB, false);
 	}
 }
