@@ -405,6 +405,7 @@ public class ContainerSpellStation extends RecipeBookContainer<InventorySpellSta
 				}else ++i;
 			}
 		}
+		//System.out.println("Merge: " + flag);
 		return flag;
 	}
 	

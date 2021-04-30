@@ -34,7 +34,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 public class SCMEventHandler {
 
 	@OnlyIn(Dist.CLIENT)
-	@SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
+	@SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = false)
 	public static void extendedReachEvent(ClickInputEvent event)
 	{
 		//scmcraft.LOGGER.debug("Caught click event");
@@ -72,7 +72,7 @@ public class SCMEventHandler {
 					System.out.println("Extended Reach hit");
 				}
 				
-				event.setCanceled(true);
+				//event.setCanceled(true);
 			}
 		}
 	}
@@ -144,7 +144,7 @@ public class SCMEventHandler {
 	 * @param event
 	 */
 	@OnlyIn(Dist.CLIENT)
-	@SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)
+	@SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = false)
 	public static void spellToolTipEvent(ItemTooltipEvent event)
 	{
 		ItemStack stack = event.getItemStack();

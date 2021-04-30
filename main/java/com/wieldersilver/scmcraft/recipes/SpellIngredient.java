@@ -54,7 +54,7 @@ public class SpellIngredient extends NBTIngredient
         if (input == null)
             return false;
         
-        System.out.println(stacks.toString());
+        //System.out.println(stacks.toString());
         
         //System.out.println("them: " + input.getItem().toString());
         
