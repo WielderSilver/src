@@ -410,6 +410,21 @@ public class ContainerSpellStation extends RecipeBookContainer<InventorySpellSta
 	
 	private static boolean areItemStacksEqual(ItemStack stackA, ItemStack stackB)
 	{
-		return stackA.equals(stackB, false);
+		return stackA.getItem().equals(stackB.getItem()) && ItemStack.areItemStackTagsEqual(stackA, stackB);
+	}
+	
+	@Override
+	public void onContainerClosed(PlayerEntity player) 
+	{
+		super.onContainerClosed(player);
+		for(int i = 0; i < 4; i++)
+		{
+			ItemStack stack = inputInventory.getStackInSlot(i);
+			if(!stack.isEmpty())
+			{
+				player.dropItem(stack, false);
+				inputInventory.setInventorySlotContents(i, ItemStack.EMPTY);
+			}
+		}
 	}
 }
